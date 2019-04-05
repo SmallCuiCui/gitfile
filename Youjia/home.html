@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>Home</title>
+		<link rel="shortcut icon" href="img/logo_o.png" />
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+		<link rel="stylesheet" href="css/animation.css" />
+		<link rel="stylesheet" type="text/css" href="css/home.css" />
+	</head>
+
+	<body>
+		<div class="main_top" id="home">
+			<header>
+				<div class="logo">
+					<h3><a href="#home"><img src="img/logo_w.png" /><span>有家民宿</span></a></h3>
+				</div>
+
+				<ul class="menu">
+					<li><a href="home.html" class="active">首页</a></li>
+					<li class="menu_nav">
+						<a href="#">导航 <i class="iconfont icon-icon"></i></a>
+						<ul>
+							<li><a href="#price_first">热门地</a></li>
+							<li><a href="#hot_hose">特惠房源</a></li>
+							<li><a href="#travel_story">精彩旅行故事</a></li>
+							<li><a href="#server_system">服务保障</a></li>
+							<li><a href="#footer">关于我们</a></li>
+						</ul>
+					</li>
+					<li><a href="home-source.html">房源</a></li>
+					<li><a href="rent-house.html">我要出租</a></li>
+					<li><a href="story.html">故事站</a></li>
+					<li class="self-li"><a href="self.html">个人中心</a></li>
+					<li class="login-li">
+						<a href="#" id="login">登录/注册</a>
+					</li>
+				</ul>
+				
+				
+			</header>
+
+
+			<div class="banner">
+				<ul class="banner_bg">
+					<li>
+						<div class="container">
+							<div class="banner_txt">
+								<p>小长假出行，让阳光海滩唤醒你</p>
+								<h3 class="pvt-title">五一搭配周末72小时<br/>领取礼券玩个够</h3>
+								<a href="about.html" class="btn">立即领取</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<div class="banner_txt">
+								<p>不负好时光，在温柔的风中与你相遇</p>
+								<h3 class="pvt-title">在海浪声中</br>住进海边豪华别墅</h3>
+								<a href="about.html" class="btn">了解更多</a>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="container">
+							<div class="banner_txt">
+								<p>趁着好时光，与明媚的春日来张合影</p>
+								<h3 class="pvt-title">在花香与暖阳里<br/>发现国内赏花目的地</h3>
+								<a href="about.html" class="btn">了解更多</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<div class="banner_txt">
+								<p>在烟雨中感受人间四月天</p>
+								<h3 class="pvt-title">在新绿与暖阳里<br/>发现江南好风光</h3>
+								<a href="about.html" class="btn">了解更多</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
+			<div class="home-search top_0 top_3">
+				<img src="img/logo_o.png" />
+				<form>
+					<i class="iconfont icon-weibiaoti--"></i>
+					<input type="text" placeholder="搜索西湖试试" class="address" />
+					<input type="date" />
+					<input type="submit" value="搜索" />
+				</form>
+			</div>
+
+		</div>
+
+		<!-- 登录注册 -->
+		<div class="aside-wrap">
+				<aside>
+					<div class="login-box">
+						<div class="lg-top" id="lg-top">
+							<p id="user-login" class="border-bot">用户登录</p>
+							<p id="user-reg">用户注册</p>
+						</div>
+						<div class="lg-bottom">
+							<form class="lg_form" method="post">
+								<h4>
+									<i class="iconfont icon-shouji"></i>
+									<input type="text" name="username" id="username" placeholder="手机号/邮箱">
+								</h4>
+
+								<p>抱歉！此用户不存在</p>
+
+								<h4>
+									<i class="iconfont icon-suo"></i>
+									<input type="password" name="password" id="password" placeholder="密码">
+
+								</h4>
+
+								<p>抱歉！密码错误</p>
+
+								<input type="button" name="login-btn" class="login-btn" value="登录">
+
+								<h3 class="lg-botp">
+									<input type="checkbox" name="" checked="checked">自动登录
+									<span><a href="#">忘记密码</a></span>
+								</h3> 
+
+							</form>
+							<form class="rgs_form" method="post">
+								<!-- 使用电话号码注册 -->
+								<h4>
+									<i class="iconfont icon-shouji"></i>
+									<input type="text" name="number" placeholder="电话号码">
+								</h4>
+								
+								<p>此电话已经注册</p>
+								<h4>
+									<i class="iconfont icon-suo"></i>
+									<input type="password" name="new-pas" placeholder="密码">
+								</h4>
+								
+								<p id="new-ps-p">密码强度不够</p>
+								<h4>
+									<i class="iconfont icon-suo"></i>
+									<input type="password" name="che-pas" placeholder="确认密码" >
+								</h4>
+								
+								<p id="che-pas-p">密码不一致，请重新输入</p>
+
+								<!-- 验证码 -->
+								<h4>
+									<i class="iconfont icon-message"></i>
+									<input type="text" name="yanz-code" placeholder="验证码">
+								</h4>
+								
+								<p>抱歉！验证码错误</p>
+
+								<input type="button" name="reg-btn" class="reg-btn" value="立即注册">
+
+								<h3 class="reg_bottom">
+									<input type="checkbox" name="" checked="checked">
+									<span>我同意<a href="#"><<服务协议>></a><a href="#"><<隐私保护声明>></a></span>
+								</h3>
+							</form>
+						</div>
+					</div>
+					<div class="other_lg">
+						<h3>合作网站账户登录</h3>
+
+						<a href="#">
+								<i class="iconfont icon-icon-test-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy"></i>
+								<span>QQ登录</span>
+						</a>
+
+						<a href="#">
+								<i class="iconfont icon-weixin"></i>
+								<span>微信登录</span>
+						</a>
+
+						<a href="#">
+								<i class="iconfont icon-weibo"></i>
+								<span>微博登录</span>
+						</a>
+						<p class="have-p">已有账号<span class="have-login">登录>></span></p>
+						<p class="no-p">还没有账号<span class="have-login">注册>></span></p>
+					</div>
+
+					<a href="#" class="cancel-btn">
+						<i class="iconfont icon-x "></i>
+					</a>
+				</aside>
+			</div>
+			<!-- 登录注册 -->
+
+		<div class="move_to_top">
+			<a href="#home">
+			</a>
+		</div>
+
+		<div class="main-content">
+			<!--特惠房源-->
+			<div class="price_first" id="price_first">
+
+				<div class="price_top">
+					<div>特惠房源</div>
+					<ul>
+						<li><a href="#">成都</a></li>
+						<li><a href="#">北京</a></li>
+						<li><a href="#">杭州</a></li>
+						<li><a href="#">重庆</a></li>
+						<li><a href="#">厦门</a></li>
+						<li><a href="#">广州</a></li>
+						<li><a href="#">上海</a></li>
+						<li><a href="#">南京</a></li>
+					</ul>
+				</div>
+
+				<div class="hose_show">
+					<dl href="#">
+						<dt></dt>
+						<dd>
+							<a href="#"><img src="img/t1.jpg" /></a>
+							<h4>白书民宿的家</h4>
+							<p>￥456</p>
+						</dd>
+					</dl>
+					<dl href="#">
+						<dt></dt>
+						<dd>
+							<a href="#"><img src="img/t1.jpg" /></a>
+							<h4>白书民宿的家</h4>
+							<p>￥456</p>
+						</dd>
+					</dl>
+					<dl href="#">
+						<dt></dt>
+						<dd>
+							<a href="#"><img src="img/t1.jpg" /></a>
+							<h4>白书民宿的家</h4>
+							<p>￥456</p>
+						</dd>
+					</dl>
+					<dl href="#">
+						<dt></dt>
+						<dd>
+							<a href="#"><img src="img/t1.jpg" /></a>
+							<h4>白书民宿的家</h4>
+							<p>￥456</p>
+						</dd>
+					</dl>
+					<dl href="#">
+						<dt></dt>
+						<dd>
+							<a href="#"><img src="img/t1.jpg" /></a>
+							<h4>白书民宿的家</h4>
+							<p>￥456</p>
+						</dd>
+					</dl>
+					<dl href="#">
+						<dt></dt>
+						<dd>
+							<a href="#"><img src="img/t1.jpg" /></a>
+							<h4>白书民宿的家-<span>杭州</span></h4>
+							<p>￥456</p>
+						</dd>
+					</dl>
+
+				</div>
+			</div>
+			<!--特惠房源-->
+
+			<!--热门房源-->
+			<div id="hot_hose" class="hot_hose modle-box">
+				<h3>热门出行，享受生活，就在脚下</h3>
+				<p>成都的大熊猫，北京的天安门，杭州的西湖，重庆的。。。随你体验</p>
+				<div class="hot-wrap">
+					<div class="post">
+						<div class="post-top">
+							<a href="#">
+								<img src="img/price1.jpg" alt="" />
+							</a>
+							<h3>
+								<i class="iconfont icon-redu"></i>
+								<span>121</span>
+							</h3>
+						</div>
+						<div class="post-bot">
+							<h4>白书家的民宿</h4>
+							<ul>
+								<li>
+									<a href="#">
+										<i class="iconfont icon-dianzan"></i>
+										<span>20点赞</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="iconfont icon-pinglun-"></i>
+										<span>48评论</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="iconfont icon-didian"></i>
+										<span>成都春熙路</span>
+									</a>
+								</li>
+							</ul>
+							<p>民宿描述，体验三亚风情，享受沐浴阳光,交通便利，邻近商城，旅游景点，民宿描述，体验三亚风情，享受沐浴阳光,交通便利，邻近商城，旅游景点，</p>
+							<a href="#" class="order">立即预定</a>
+						</div>
+						
+					</div>
+					
+					<div class="post">
+						<div class="post-top">
+							<a href="#">
+								<img src="img/price3.jpg" alt="" />
+							</a>
+							<h3>
+								<i class="iconfont icon-redu"></i>
+								<span>121</span>
+							</h3>
+						</div>
+						<div class="post-bot">
+							<h4>小猪民宿餐厅</h4>
+							<ul>
+								<li>
+									<a href="#">
+										<i class="iconfont icon-dianzan"></i>
+										<span>20点赞</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="iconfont icon-pinglun-"></i>
+										<span>48评论</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="iconfont icon-didian"></i>
+										<span>杭州西湖</span>
+									</a>
+								</li>
+							</ul>
+							<p>民宿描述，体验三亚风情，享受沐浴阳光,交通便利，邻近商城，旅游景点，民宿描述，体验三亚风情，享受沐浴阳光,交通便利，邻近商城，旅游景点，</p>
+							<a href="#" class="order">立即预定</a>
+						</div>
+					</div>
+					
+					<div class="post">
+						<div class="post-top">
+							<a href="#">
+								<img src="img/price2.jpg" alt="" />
+							</a>
+							<h3>
+								<i class="iconfont icon-redu"></i>
+								<span>121</span>
+							</h3>
+						</div>
+						<div class="post-bot">
+							<h4>白书家的民宿</h4>
+							<ul>
+								<li>
+									<a href="#">
+										<i class="iconfont icon-dianzan"></i>
+										<span>545点赞</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="iconfont icon-pinglun-"></i>
+										<span>115评论</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="iconfont icon-didian"></i>
+										<span>北京3里屯</span>
+									</a>
+								</li>
+							</ul>
+							<p>民宿描述，体验三亚风情，享受沐浴阳光,交通便利，邻近商城，旅游景点，民宿描述，体验三亚风情，享受沐浴阳光,交通便利，邻近商城，旅游景点，</p>
+							<a href="#" class="order">立即预定</a>
+						</div>
+					</div>
+					
+				</div>
+				
+				
+			</div>
+			<!--热门房源-->
+			
+			<!--精彩旅行故事-->
+			<div class="modle-box travel_story" id="travel_story">
+				<h3>世间所有相遇都是久别重逢</h3>
+				<p>我们都在路上彼此感动着，享受生活</p>
+				<div class="story-wrap">
+					<div class="story-left story-box">
+						<h4>旅客故事</h4>
+						<div class="story story-l">
+							<div>
+								<p class="id-tou"><a href="#"><img src="img/t1.jpg"/></a></p>
+								<p class="name-time">白书</p>
+								<p class="name-time">2019-2-7</p>
+								<p class="text"><a href="#">晚上亲自来火车站接两个大理粗浅打卡少女，热心为我们安排行程，为我们联系了带拍照的包车小哥哥，让这一场短暂的大理打卡分外愉快。三月的洱海，天很蓝，水很清，阳光和雨并存，花开的正好，游客不多，一切刚好。陈叔的房间，有阳光、有落地窗，更重要的是有善良又有趣的人，是向往的生活的模样了。这一次仓促的洱海之旅，真的是蜻蜓点水式的打卡，下次还来小屋里和陈叔聊天喝茶晒太阳。</a></p>
+							</div>
+							<div>
+								<p class="id-tou"><a href="#"><img src="img/t2.jpg"/></a></p>
+								<p class="name-time">美佳子</p>
+								<p class="name-time">2019-2-7</p>
+								<p class="text"><a href="#">满院的花草，冬日的暖阳，大气的木质茶台，超级便利的交通，还有帅气的房东，和蔼的阿姨，一只很乖巧的拉布拉多，构成了我对城墙根儿的美好回忆。在这里住的很舒服，房间干净整洁，每天都像一家人一样相处，老板小哥让我特别感动，帮我提最重的行李，推荐本地好吃的客家菜和海鲜，给我们推荐最好的游走古城海边的方式。非常感谢，让我们一家人的大鹏所城之行完美收官，以后有机会一定还会再来，希望城墙根儿越来越好，祝福你们！！</a></p>
+							</div>
+							<div>
+								<p class="id-tou"><a href="#"><img src="img/t3.jpg"/></a></p>
+								<p class="name-time">红晴</p>
+								<p class="name-time">2019-12-1</p>
+								<p class="text"><a href="#">晚上亲自来火车站接两个大理粗浅打卡少女，热心为我们安排行程，为我们联系了带拍照的包车小哥哥，让这一场短暂的大理打卡分外愉快。三月的洱海，天很蓝，水很清，阳光和雨并存，花开的正好，游客不多，一切刚好。陈叔的房间，有阳光、有落地窗，更重要的是有善良又有趣的人，是向往的生活的模样了。这一次仓促的洱海之旅，真的是蜻蜓点水式的打卡，下次还来小屋里和陈叔聊天喝茶晒太阳。</a></p>
+							</div>
+							<div>
+								<p class="id-tou"><a href="#"><img src="img/t1.jpg"/></a></p>
+								<p class="name-time">玲子</p>
+								<p class="name-time">2018-5-17</p>
+								<p class="text"><a href="#">一进门就被房东小姐姐的颜值吸引，一见如故的聊了半个小时，请教了很多迪士尼的小攻略（毕竟第一次来迪士尼），依依不舍的上楼后发现房间大的让我震惊，和图片完全相符，很干净。第二天一早还有阿姨做的早饭，味道极好。吃完准备出门，本来我们准备把行李寄存在迪士尼的，后来小姐姐让我们直接放在别墅，晚上再找人把行李送给我们。因为丽舍名宿爱上一座城，希望下次过来能吃上小姐姐的喜糖啦。</a></p>
+							</div>
+							<div>
+								<p class="id-tou"><a href="#"><img src="img/t2.jpg"/></a></p>
+								<p class="name-time">芍药</p>
+								<p class="name-time">2019-2-7</p>
+								<p class="text"><a href="#">晚上亲自来火车站接两个大理粗浅打卡少女，热心为我们安排行程，为我们联系了带拍照的包车小哥哥，让这一场短暂的大理打卡分外愉快。三月的洱海，天很蓝，水很清，阳光和雨并存，花开的正好，游客不多，一切刚好。陈叔的房间，有阳光、有落地窗，更重要的是有善良又有趣的人，是向往的生活的模样了。这一次仓促的洱海之旅，真的是蜻蜓点水式的打卡，下次还来小屋里和陈叔聊天喝茶晒太阳。</a></p>
+							</div>
+						</div>
+						<ul id="ul-li-l">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<em></em>
+					</div>
+					
+					<div class="story-right story-box">
+						<h4>房东故事</h4>
+						<div class="story-f story">
+							<div>
+								<p class="id-tou"><a href="#"><img src="img/t2.jpg"/></a></p>
+								<p class="name-time">白书</p>
+								<p class="name-time">2019-2-7</p>
+								<p class="text"><a href="#">晚上亲自来火车站接两个大理粗浅打卡少女，热心为我们安排行程，为我们联系了带拍照的包车小哥哥，让这一场短暂的大理打卡分外愉快。三月的洱海，天很蓝，水很清，阳光和雨并存，花开的正好，游客不多，一切刚好。陈叔的房间，有阳光、有落地窗，更重要的是有善良又有趣的人，是向往的生活的模样了。这一次仓促的洱海之旅，真的是蜻蜓点水式的打卡，下次还来小屋里和陈叔聊天喝茶晒太阳。</a></p>
+							</div>
+							<div>
+								<p class="id-tou"><a href="#"><img src="img/t2.jpg"/></a></p>
+								<p class="name-time">美佳子</p>
+								<p class="name-time">2019-2-7</p>
+								<p class="text"><a href="#">满院的花草，冬日的暖阳，大气的木质茶台，超级便利的交通，还有帅气的房东，和蔼的阿姨，一只很乖巧的拉布拉多，构成了我对城墙根儿的美好回忆。在这里住的很舒服，房间干净整洁，每天都像一家人一样相处，老板小哥让我特别感动，帮我提最重的行李，推荐本地好吃的客家菜和海鲜，给我们推荐最好的游走古城海边的方式。非常感谢，让我们一家人的大鹏所城之行完美收官，以后有机会一定还会再来，希望城墙根儿越来越好，祝福你们！！</a></p>
+							</div>
+							<div>
+								<p class="id-tou"><a href="#"><img src="img/t3.jpg"/></a></p>
+								<p class="name-time">红晴</p>
+								<p class="name-time">2019-12-1</p>
+								<p class="text"><a href="#">晚上亲自来火车站接两个大理粗浅打卡少女，热心为我们安排行程，为我们联系了带拍照的包车小哥哥，让这一场短暂的大理打卡分外愉快。三月的洱海，天很蓝，水很清，阳光和雨并存，花开的正好，游客不多，一切刚好。陈叔的房间，有阳光、有落地窗，更重要的是有善良又有趣的人，是向往的生活的模样了。这一次仓促的洱海之旅，真的是蜻蜓点水式的打卡，下次还来小屋里和陈叔聊天喝茶晒太阳。</a></p>
+							</div>
+							<div>
+								<p class="id-tou"><a href="#"><img src="img/t1.jpg"/></a></p>
+								<p class="name-time">玲子</p>
+								<p class="name-time">2018-5-17</p>
+								<p class="text"><a href="#">一进门就被房东小姐姐的颜值吸引，一见如故的聊了半个小时，请教了很多迪士尼的小攻略（毕竟第一次来迪士尼），依依不舍的上楼后发现房间大的让我震惊，和图片完全相符，很干净。第二天一早还有阿姨做的早饭，味道极好。吃完准备出门，本来我们准备把行李寄存在迪士尼的，后来小姐姐让我们直接放在别墅，晚上再找人把行李送给我们。因为丽舍名宿爱上一座城，希望下次过来能吃上小姐姐的喜糖啦。</a></p>
+							</div>
+							<div>
+								<p class="id-tou"><a href="#"><img src="img/t2.jpg"/></a></p>
+								<p class="name-time">芍药</p>
+								<p class="name-time">2019-2-7</p>
+								<p class="text"><a href="#">晚上亲自来火车站接两个大理粗浅打卡少女，热心为我们安排行程，为我们联系了带拍照的包车小哥哥，让这一场短暂的大理打卡分外愉快。三月的洱海，天很蓝，水很清，阳光和雨并存，花开的正好，游客不多，一切刚好。陈叔的房间，有阳光、有落地窗，更重要的是有善良又有趣的人，是向往的生活的模样了。这一次仓促的洱海之旅，真的是蜻蜓点水式的打卡，下次还来小屋里和陈叔聊天喝茶晒太阳。</a></p>
+							</div>
+						</div>
+						<ul id="ul-li-f">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--精彩旅行故事-->
+			
+			<!--服务保障-->
+			<div class="modle-box server_system" id="server_system">
+				<h3>让分享和信赖悄然而生</h3>
+				<p>完善的安全机制和信用机制，让你在旅途中只需关注生活</p>
+				<div class="server-wrap">
+					<dl>
+						<dt>
+							<i class="iconfont icon-shenfenyanzheng"></i>
+							<p>双方身份验证</p>
+						</dt>
+						<dd>切实保证房东房客的身份真实，为双方的交易提供安全保障</dd>
+					</dl>
+					
+					<dl>
+						<dt>
+							<i class="iconfont icon-jiaoyi"></i>
+							<p>安全线上交易</p>
+						</dt>
+						<dd>通过线上的交易，保证租房用户的经济安全，避免线下发生的安全纠纷</dd>
+					</dl>
+					
+					<dl>
+						<dt>
+							<i class="iconfont icon-cup"></i>
+							<p>坚实保障后盾</p>
+						</dt>
+						<dd>提供完善的住房线上服务，预定退订改签等一条龙，让你住房无忧，方便快捷</dd>
+					</dl>
+					
+					<dl>
+						<dt>
+							<i class="iconfont icon-hangyejilei"></i>
+							<p>点评积累信用</p>
+						</dt>
+						<dd>商家的信用额度通过房客的点评积累，为房客选择民宿时提供参考</dd>
+					</dl>
+				</div>
+			</div>
+			<!--服务保障-->
+		</div>
+		
+		<!--关于我们-->
+		<footer id="footer">
+			<div class="foot-wrap">
+				
+				<h3 class="foot-logo"><a href="#home"><img src="img/logo_w.png" /><span>有家民宿</span></a></h3>
+				
+				<ul class="foot-links">
+					<li>导航</li>
+					<li><a href="home.html">首页</a></li>
+					<li><a href="home-source.html">房源</a></li>
+					<li><a href="#">我要出租</a></li>
+					<li><a href="#">故事站</a></li>
+					<li><a href="#">联系我们</a></li>
+				</ul>
+				<!--联系方式-->
+				<ul class="foot-contact">
+					<li>联系方式</li>
+					<li>电话</li>
+					<li>18281575618</li>
+					<li>email</li>
+					<li>2511692877@qq.com</li>
+					<li>地址</li>
+					<li>西南科技大学</li>
+				</ul>
+			</div>
+			<p>Copyright © 2019.Company name All rights reserved</p>
+		</footer>
+
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/home.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
+		
+	</body>
+
+</html>

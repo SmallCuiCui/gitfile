@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人中心</title>
+		<link rel="shortcut icon" href="img/logo_o.png" />
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css" />
+		<link rel="stylesheet" href="css/global.css" />
+		<link rel="stylesheet" href="css/self.css" />
+		<link rel="stylesheet" href="css/animation.css" />
+	</head>
+	<body>
+		<div class="page-top">
+			<header>
+				<div class="logo">
+					<h3><a href="#home"><img src="img/logo_w.png" /><span>有家民宿</span></a></h3>
+				</div>
+
+				<ul class="menu">
+					<li><a href="home.html" class="active">首页</a></li>
+					<li class="menu_nav">
+						<a href="#">导航 <i class="iconfont icon-icon"></i></a>
+						<ul>
+							<li><a href="#price_first">热门地</a></li>
+							<li><a href="#hot_hose">特惠房源</a></li>
+							<li><a href="#travel_story">精彩旅行故事</a></li>
+							<li><a href="#server_system">服务保障</a></li>
+							<li><a href="#footer">关于我们</a></li>
+						</ul>
+					</li>
+					<li><a href="home-source.html">房源</a></li>
+					<li><a href="rent-house.html">我要出租</a></li>
+					<li><a href="story.html">故事站</a></li>
+					<li><a href="self.html">个人中心</a></li>
+					
+				</ul>
+			</header>
+		</div>
+
+		<!-- 登录注册 -->
+		<div class="aside-wrap">
+				<aside>
+					<div class="login-box">
+						<div class="lg-top" id="lg-top">
+							<p id="user-login" class="border-bot">用户登录</p>
+							<p id="user-reg">用户注册</p>
+						</div>
+						<div class="lg-bottom">
+							<form class="lg_form" method="post">
+								<h4>
+									<i class="iconfont icon-shouji"></i>
+									<input type="text" name="username" id="username" placeholder="手机号/邮箱">
+								</h4>
+
+								<p>抱歉！此用户不存在</p>
+
+								<h4>
+									<i class="iconfont icon-suo"></i>
+									<input type="password" name="password" id="password" placeholder="密码">
+
+								</h4>
+
+								<p>抱歉！密码错误</p>
+
+								<input type="button" name="login-btn" class="login-btn" value="登录">
+
+								<h3 class="lg-botp">
+									<input type="checkbox" name="" checked="checked">自动登录
+									<span><a href="#">忘记密码</a></span>
+								</h3> 
+
+							</form>
+							<form class="rgs_form" method="post">
+								<!-- 使用电话号码注册 -->
+								<h4>
+									<i class="iconfont icon-shouji"></i>
+									<input type="text" name="number" placeholder="电话号码">
+								</h4>
+								
+								<p>此电话已经注册</p>
+								<h4>
+									<i class="iconfont icon-suo"></i>
+									<input type="password" name="new-pas" placeholder="密码">
+								</h4>
+								
+								<p id="new-ps-p">密码强度不够</p>
+								<h4>
+									<i class="iconfont icon-suo"></i>
+									<input type="password" name="che-pas" placeholder="确认密码" >
+								</h4>
+								
+								<p id="che-pas-p">密码不一致，请重新输入</p>
+
+								<!-- 验证码 -->
+								<h4>
+									<i class="iconfont icon-message"></i>
+									<input type="text" name="yanz-code" placeholder="验证码">
+								</h4>
+								
+								<p>抱歉！验证码错误</p>
+
+								<input type="button" name="reg-btn" class="reg-btn" value="立即注册">
+
+								<h3 class="reg_bottom">
+									<input type="checkbox" name="" checked="checked">
+									<span>我同意<a href="#"><<服务协议>></a><a href="#"><<隐私保护声明>></a></span>
+								</h3>
+							</form>
+						</div>
+					</div>
+					<div class="other_lg">
+						<h3>合作网站账户登录</h3>
+
+						<a href="#">
+								<i class="iconfont icon-icon-test-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy-copy"></i>
+								<span>QQ登录</span>
+						</a>
+
+						<a href="#">
+								<i class="iconfont icon-weixin"></i>
+								<span>微信登录</span>
+						</a>
+
+						<a href="#">
+								<i class="iconfont icon-weibo"></i>
+								<span>微博登录</span>
+						</a>
+						<p class="have-p">已有账号<span class="have-login">登录>></span></p>
+						<p class="no-p">还没有账号<span class="have-login">注册>></span></p>
+					</div>
+
+					<a href="#" class="cancel-btn">
+						<i class="iconfont icon-x "></i>
+					</a>
+				</aside>
+			</div>
+		<!-- 登录注册 -->
+
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
+	</body>
+</html>

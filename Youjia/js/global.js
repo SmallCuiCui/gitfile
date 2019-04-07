@@ -6,6 +6,8 @@ $(".have-p").hide();//登录模块中有账户，此时显示没有账户
 
 var islogin;//标记用户是否登录
 
+//islogin = false;
+
 if(localStorage.getItem('islogin') == null){
 	islogin = false;
 }else{

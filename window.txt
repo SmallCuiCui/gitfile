@@ -1,0 +1,47 @@
+点击事件的实现
+	
+
+BOM浏览器对象模型
+	核心对象是window   所有在全局作用域下声明的变量，函数都会变成window的方法和属性
+	变量可以未声明直接赋值，但是不能未声明直接访问
+
+window下的子对象  访问时不需要声明window.即将其子对象当全局对象使用
+	window.location：获取当前页面的地址信息
+		location.href：当前页面的URL
+		location.hostname：主机域名
+		location.pathname:当前页面的路径和文件名
+		location.port：主机端口
+		location.protocol：web协议
+		location.search：请求参数（？后面的内容)
+		location.reload()  //刷新页面
+
+	window.navigator：返回当前浏览器信息
+		navigator.appName：浏览器名称
+		navigator.appVersion：浏览器版本号
+		navigator.platform：当前计算机操作系统
+
+	window.history：历史
+		history.go(1)  //正数前进，负数后退
+		histor.back()  //后退
+		history.forward() //前进
+
+	window.screen:屏幕
+		screen.width
+		screen.height
+	
+	window下弹框
+		alert();//会中断程序，点击确定后才能继续执行
+		prompt();  //输入弹框，得到内容是一个字符串
+		confirm();   //确认框，点击确定得到true,点击取消得到false
+
+	timer=setInterval(fun,time)  //间隔time毫秒执行一次函数，参数一为函数，参数二为时间(毫秒)
+		clearInterval(timer)  //清楚timer间隔定时器
+	timer=setTimeout(fun,time)  //time毫秒之后执行fun函数，只执行一次
+		clearTimeout(timer)  //清除超时定时器
+
+	window.onload = fun();  //页面加载之后执行函数
+	window.onscroll = fun();  //滚动屏幕时触发
+	window.onresize = fun();  //浏览器窗口大小发生变化时触发
+
+
+	

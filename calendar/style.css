@@ -1,0 +1,82 @@
+*{
+	margin:0;
+	padding:0;
+}
+ul li{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+}
+.wrap{
+	height: 300px;
+	width: 300px;
+	margin: auto;
+	margin-top: 100px;
+	border: 1px solid red;
+	padding:0 20px;
+	box-sizing: border-box;
+
+}
+.header{
+	height:50px;
+	display: flex;
+	align-items: center;
+
+}
+.header h3{
+	flex:1;
+	font-weight: normal;
+	text-align:center;
+	font-size: 18px;
+}
+.header span{
+	cursor: pointer;
+	color:red;
+}
+.nav{
+	height:40px;
+	display:flex;
+	align-items:center;
+	font-size:16px;
+	border-bottom:1px solid black;
+}
+.nav li{
+	width:14%;
+	text-align:center;
+}
+.datelist{
+	display:flex;
+	flex-wrap: wrap;
+}
+.datelist li{
+	width:14%;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	text-align:center;
+	cursor:pointer;
+}
+.today{
+	background-color: gray;
+	color:white;
+}
+.xiuxi{
+	color:red;
+}
+.input-wrap{
+	width:300px;
+	height:100px;
+	margin:10px auto;
+}
+input{
+	height:30px;
+	width:300px;
+	padding-left: 20px;
+	box-sizing:border-box;
+}
+
+.disabled{
+	pointer-events: none;
+	color:#cccccc;
+}

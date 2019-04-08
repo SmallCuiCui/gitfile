@@ -86,14 +86,32 @@
 
 			</div>
 
-			<div class="home-search top_0 top_3">
+			<div class="home-search">
 				<img src="img/logo_o.png" />
 				<form>
 					<i class="iconfont icon-weibiaoti--"></i>
 					<input type="text" placeholder="搜索西湖试试" class="address" />
-					<input type="date" />
-					<input type="submit" value="搜索" />
+					<input type="text" name="" value="年/月/日" class ="selectDate">
+					<input type="submit" value="搜索" class="searchbtn" />
 				</form>
+				<!-- 日历 -->
+				<div class="wrap">
+					<div class="header">
+						<span id="preMonth">上一月</span>
+						<h3 id="title"></h3>
+						<span id="nextMonth">下一月</span>
+					</div>
+					<ul class="nav">
+						<li>日</li>
+						<li>一</li>
+						<li>二</li>
+						<li>三</li>
+						<li>四</li>
+						<li>五</li>
+						<li>六</li>
+					</ul>
+					<ul class="datelist" id="datelist"></ul>
+				</div>
 			</div>
 
 		</div>

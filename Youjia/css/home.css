@@ -81,11 +81,11 @@
 }
 .main_top .home-search{
 	position: absolute;
-	top: 383px;
-	left: 350px;
+	top: 290px;
+	left: 400px;
 	height: 50px;
 	/*z-index: 100;*/
-	overflow: hidden;
+	/*overflow: hidden;*/
 	animation: move 0.5s ease;
 }
 
@@ -114,7 +114,7 @@
 	padding: 0 10px;
 	height: 25px;
 	border: none;
-	color: gray;
+	color: #333333;
 	border-right: 1px solid #CCCCCC;
 	background-color: white;
 	flex: 3;
@@ -124,6 +124,8 @@
 .main_top .home-search form input:nth-of-type(2){
 	border: none;
 }
+
+
 .main_top .home-search form input:last-child{
 	height: 100%;
 	flex: 1;
@@ -135,6 +137,69 @@
 	background-color: #f0546a;
 }
 
+/*搜索框下的日历*/
+.main_top .home-search .wrap{
+	position: absolute;
+	top: 50px;
+	left: 330px;
+	background-color: rgba(250,250,250,.8);
+	height: 270px;
+	width: 300px;
+	margin: auto;
+	/*border: 1px solid red;*/
+	padding:0 20px;
+	box-sizing: border-box;
+	display: none;
+}
+
+.main_top .home-search .wrap .header{
+	height:50px;
+	display: flex;
+	align-items: center;
+
+}
+.main_top .home-search .wrap .header h3{
+	flex:1;
+	font-weight: normal;
+	text-align:center;
+	font-size: 18px;
+}
+.main_top .home-search .wrap .header span{
+	cursor: pointer;
+	color:red;
+}
+.main_top .home-search .wrap .nav{
+	height:40px;
+	display:flex;
+	align-items:center;
+	font-size:16px;
+	border-bottom:1px solid black;
+}
+.main_top .home-search .wrap .nav li{
+	width:14%;
+	text-align:center;
+}
+.main_top .home-search .wrap .datelist{
+	display:flex;
+	flex-wrap: wrap;
+}
+.main_top .home-search .wrap .datelist li{
+	width:14%;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	text-align:center;
+	cursor:pointer;
+}
+.main_top .home-search .wrap .datelist .today{
+	background-color: gray;
+	color:white;
+}
+.main_top .home-search .wrap .datelist .xiuxi{
+	color:red;
+}
+
+/*搜索框下的日历*/
 .move_to_top{
 	height: 40px;
 	width: 40px;

@@ -26,7 +26,7 @@
 		
 		function selectDay(){
 			$(".datelist li").click(function(){
-			console.log(111111);
+			//console.log(111111);
 			clickNum++;
 			var inputVal="";
 

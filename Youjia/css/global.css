@@ -360,40 +360,6 @@ aside .cancel-btn i{
 }
 /*登录注册*/
 
-/*section  子页面下的page-top下面的模块*/
-section{
-	height: 55px;
-	padding-left: 10px;
-	background-color: #e9ecef;
-}
-section ul{
-	display: flex;
-	align-items: center;
-	height: 55px;
-}
-section ul li{
-	width: 75px;
-	height: 35px;
-	line-height: 35px;
-	text-align: center;
-	color: #6c757d;
-	border-radius: 15px;
-	overflow: hidden;
-	letter-spacing: 1px;
-	animation: sec 0.5s linear;
-}
-section ul li a{
-	display: block;
-	width: 75px;
-	height: 35px;
-	line-height: 35px;
-	background-color: #313131;
-	text-align: center;
-	color: #ffffff;
-	font-size: 13px;
-	letter-spacing: 1px;
-}
-
 /*子页面的内容区*/
 .content-box{
 	width: 100%;
@@ -404,3 +370,69 @@ section ul li a{
 	margin: 0 auto;
 	overflow: hidden;
 }
+/*子页面的内容区*/
+
+
+/*搜索框下的日历*/
+.date-wrap{
+	position: absolute;
+	top: 50px;
+	left: 330px;
+	background-color: rgba(250,250,250,.8);
+	height: 270px;
+	width: 300px;
+	margin: auto;
+	/*border: 1px solid red;*/
+	padding:0 20px;
+	box-sizing: border-box;
+	display: none;
+}
+
+.date-wrap .header{
+	height:50px;
+	display: flex;
+	align-items: center;
+
+}
+.date-wrap .header h3{
+	flex:1;
+	font-weight: normal;
+	text-align:center;
+	font-size: 18px;
+}
+.date-wrap .header span{
+	cursor: pointer;
+	color:red;
+}
+.date-wrap .nav{
+	height:40px;
+	display:flex;
+	align-items:center;
+	font-size:16px;
+	border-bottom:1px solid black;
+}
+.date-wrap .nav li{
+	width:14%;
+	text-align:center;
+}
+.date-wrap .datelist{
+	display:flex;
+	flex-wrap: wrap;
+}
+.date-wrap .datelist li{
+	width:14%;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	text-align:center;
+	cursor:pointer;
+}
+.date-wrap .datelist .today{
+	background-color: gray;
+	color:white;
+}
+.date-wrap .datelist .xiuxi{
+	color:red;
+}
+
+/*搜索框下的日历*/

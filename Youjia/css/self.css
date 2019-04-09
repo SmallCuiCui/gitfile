@@ -46,9 +46,9 @@
 	color: #666666;
 }
 .cont-top .cont-top-left .info ul li i{
-	margin-right: 5px;
+	/*margin-right: 5px;*/
 	font-size: 14px !important;
-	color: #666666 !important;
+	color: #cccccc !important;
 }
 .cont-top .cont-top-right{
 	width: 180px;
@@ -75,29 +75,183 @@
 }
 .cont-bot .cont-bot-left{
 	width: 25%;
+	height: 290px;
 	background-color: white;
-	border: 1px solid #e0e0e0;
+}
+.cont-bot .cont-bot-left ul{
+	background-color: white;
+	overflow: hidden;
+	position: relative;
+	left: -400px;
 }
 
 .cont-bot .cont-bot-left ul li{
+	position: relative;
+	top: 290px;
 	height: 40px;
 	line-height: 40px;
 	font-size: 14px;
+	color: #333333;
 	padding-left: 40px;
 	cursor: pointer;
 	box-sizing: border-box;
+	border: 1px solid rgba(0,0,0,.1);
+	border-top: none;
+}
+
+.cont-bot .cont-bot-left ul li i{
+	margin-right: 20px;
+	font-size: 18px !important;
+	/*color: #f0546a !important;*/
+}
+.cont-bot .cont-bot-left ul li:nth-child(1) i{
+	color: #08c !important;
+}
+.cont-bot .cont-bot-left ul li:nth-child(2) i{
+	color: red !important;
+}
+.cont-bot .cont-bot-left ul li:nth-child(3) i{
+	color: #25BB9B !important;
+}
+.cont-bot .cont-bot-left ul li:nth-child(4) i{
+	color: orange !important;
+}
+.cont-bot .cont-bot-left ul li:nth-child(5) i{
+	color: red !important;
+}
+.cont-bot .cont-bot-left ul li:nth-child(6) i{
+	color: hotpink !important;
+}
+.cont-bot .cont-bot-left ul li:nth-child(7) i{
+	color: #00bc9b !important;
+}
+.cont-bot .cont-bot-left ul li:hover{
+	color: #f0546a;
 }
 .cont-bot .cont-bot-left ul li.ccc{
-	background-color: #F5F5F5;
+	background-color: rgba(240, 84, 106,.6);
+	color: white;
 }
-.cont-bot .cont-bot-left ul li i{
-	margin-right: 30px;
-	font-size: 14px !important;
-	color: #f0546a !important;
+.cont-bot .cont-bot-left ul li.ccc i{
+	color: #fff !important;
 }
 
 .cont-bot .cont-bot-rigth{
 	width: 73%;
 	background-color: white;
 	border: 1px solid #e0e0e0;
+	box-sizing: border-box;
+}
+.cont-bot .cont-bot-rigth ul{
+	position: relative;
+	top: 300px;
+	right: -400px;
+}
+.cont-bot .cont-bot-rigth ul li{
+	display: none;
+	padding: 20px;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li>div{
+	border: 1px solid rgba(0,0,0,.1);
+	margin-bottom: 10px;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div h3{
+	height: 50px;
+	line-height: 50px;
+	font-family: "宋体";
+	font-size: 18px;
+	color: #333333;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div h3 i{
+	font-size: 16px !important;
+	color: #f0546a !important;
+	margin: 0 5px;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div h3 span{
+	color: #999999;
+	font-weight: normal;
+	font-size: 12px;
+	margin-left: 10px;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div h3 font{
+	font-weight: normal;
+	cursor: pointer;
+	float: right;
+	margin-right: 30px;
+	font-size: 14px;
+	color: #f0546a;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div h3 font.save{
+	/*color:rgba(240, 84, 106,.6);*/
+	display: none;
+	color: #4884f2;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li>div>div{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 5px;
+	box-sizing: border-box;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div div p{
+	width: 48%;
+	height: 40px;
+	padding-left: 10px;
+	font-size: 14px;
+	letter-spacing: 1px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	line-height:40px;
+	color: #666666;
+	background-color: rgba(0,0,0,.07);
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div div p:last-child{
+	display: block;
+	width: 100%;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div div p input{
+	color: #cccccc;
+	height: 24px;
+	padding-left: 5px;
+	background-color: rgba(0,0,0,0);
+}
+
+.cont-bot .cont-bot-rigth ul .user-info-li div div p input.ed{
+	color: #666666;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div div ul{
+	width: 100%;
+	display: flex;
+	height: 40px;
+	margin-bottom: 10px;
+	color: #666666;
+	background-color: rgba(0,0,0,.07);
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div div ul li{
+	padding: 0 10px;
+	line-height:40px;
+	font-size: 14px;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div div ul li:nth-child(2) i{
+	color: #4884f2 !important;
+	font-size: 24px !important;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div div ul li:nth-child(3) i{
+	color: #f05151 !important;
+	font-size: 22px !important;
+}
+.cont-bot .cont-bot-rigth ul .user-info-li div div ul li:nth-child(4) i{
+	color: #00cf0d !important;
+	font-size: 26px !important;
+}
+
+.cont-bot .cont-bot-rigth ul .user-info-li div div div input{
+	color: #cccccc;
+	height: 24px;
+	padding-left: 10px;
+	background-color: rgba(0,0,0,0);
+}
+.cont-bot .cont-bot-rigth ul .order .orders-con{
+	color: red;
 }

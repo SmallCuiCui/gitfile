@@ -1,9 +1,9 @@
 		
 		//点击选择日期，显示日历
 		$('.selectDate').click(function(){
-			$('.wrap').show();
+			$('.date-wrap').show();
 		}).siblings().click(function(){
-			$('.wrap').hide();
+			$('.date-wrap').hide();
 		});
 
 		var clickNum = 0;
@@ -48,7 +48,7 @@
 			}else{//第二次点击，选择退房日期，并隐藏日历
 				inputVal = $(".selectDate").val();
 				inputVal += '~' + year +'/'+ month +'/'+selectDay;
-				$('.wrap').hide();
+				$('.date-wrap').hide();
 			}
 			
 			$(".selectDate").val (inputVal) ;	

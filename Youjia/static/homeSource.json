@@ -1,0 +1,34 @@
+{
+  "fileName":"homeSource",
+  "discript":"出租名宿的相关信息",
+  "source": [
+    {
+      "houseId": 1,
+      "housterId": 58,
+      "houseName": "白书名宿",
+      "price": 210,
+      "address": "成都玉林路",
+      "score": 21,
+      "desc": "名宿的描述",
+      "equip": "设备设施",
+      "imgs": [],
+      "order-history": [],
+      "rent-class": "出租类型",
+      "comments": ["评论"]
+    },
+    {
+      "houseId": 1,
+      "houster": 58,
+      "houseName": "白书名宿",
+      "price": 210,
+      "address": "成都玉林路",
+      "score": 21,
+      "desc": "名宿的描述",
+      "equip": "设备",
+      "imgs": [],
+      "order-history": [],
+      "rent-class": "",
+      "comments": []
+    }
+  ]
+}

@@ -8,13 +8,13 @@
 		<link rel="stylesheet" type="text/css" href="font/iconfont.css" />
 		<link rel="stylesheet" href="css/animation.css" />
 		<link rel="stylesheet" href="css/global.css" />
-		<link rel="stylesheet" href="css/source-house.css" />
+		<link rel="stylesheet" href="css/home-source.css" />
 	</head>
 	<body>
 		<div class="page-top">
 			<header>
 				<div class="logo">
-					<h3><a href="#home"><img src="img/logo_w.png" /><span>有家民宿</span></a></h3>
+					<h3><a href="home.html"><img src="img/logo_w.png" /><span>有家民宿</span></a></h3>
 				</div>
 
 				<ul class="menu">
@@ -130,13 +130,65 @@
 			<!-- 登录注册模块 -->
 
 		<section>
-				<ul>
-					<li><a href="home.html">首页</a></li>
-					<li>房源</li>
-				</ul>
+				<form name="home-filter">
+					
+					<input type="text" name="" class="address"  placeholder="位置">
+				
+					<input type="text" name="" class ="selectDate" placeholder="年/月/日">
+				
+					<dl>
+						<dt>人数</dt>
+						<dd>1</dd>
+						<dd>2-4</dd>
+						<dd>5-8</dd>
+						<dd>9+</dd>
+					</dl>
+				
+					<dl>
+						<dt>房间类型</dt>
+						<dd>独立房间</dd>
+						<dd>整套出租</dd>
+						<dd>合住房间</dd>
+					</dl>
+				
+					<dl>
+						<dt>价格区间/天</dt>
+						<dd>100以下</dd>
+						<dd>100-200</dd>
+						<dd>200-300</dd>
+						<dd>300+</dd>
+					</dl>
+			
+					<div>
+						<a href="javascript:;" id="aFilter">筛选</a>
+						<a href="javascript:;" id="aReset">重置</a>
+					</div>
+				</form>
+				<!-- 日历 -->
+				<div class="date-wrap">
+					<div class="header">
+						<span id="preMonth">上一月</span>
+						<h3 id="title"></h3>
+						<span id="nextMonth">下一月</span>
+					</div>
+					<ul class="nav">
+						<li>日</li>
+						<li>一</li>
+						<li>二</li>
+						<li>三</li>
+						<li>四</li>
+						<li>五</li>
+						<li>六</li>
+					</ul>
+					<ul class="datelist" id="datelist"></ul>
+				</div>
+				<!-- 日历 -->
 		</section>
+		
 
 		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
 		<script type="text/javascript" src="js/global.js"></script>
+		<script type="text/javascript" src="js/home.js"></script>
+		<script type="text/javascript" src="js/home-source.js"></script>
 	</body>
 </html>

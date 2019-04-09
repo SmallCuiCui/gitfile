@@ -1,0 +1,46 @@
+{
+	"fileName":"orderJson",
+  "discript":"全站订单相关信息",
+  "orders": [
+    {
+      "orderId": 12125455,
+      "houseId": 1,
+      "housterId": 58,
+      "OrdercustomerName":"",
+      "OrdercustomerTell":"",
+      "customerInfo": [
+      	{
+      		"customerName":"",
+      		"customerId":""
+      	},
+      	{
+      		"customerName":"",
+      		"customerId":""
+      	}
+      ],
+      "startTime": "",
+      "endTime": "",
+      "state":"订单状态"
+    },
+    {
+      "orderId": 15482469,
+      "houseId": 8,
+      "housterId": 124,
+      "OrdercustomerName":"",
+      "OrdercustomerTell":"",
+      "customerInfo": [
+      	{
+      		"customerName":"",
+      		"customerId":""
+      	},
+      	{
+      		"customerName":"",
+      		"customerId":""
+      	}
+      ],
+      "startTime": "",
+      "endTime": "",
+      "state":"订单状态"
+    }
+]
+}

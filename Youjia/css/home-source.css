@@ -1,0 +1,45 @@
+
+/*section  房源的筛选*/
+section{
+	height: 55px;
+	padding-left: 30px;
+	box-sizing: border-box;
+	background-color: #e9ecef;
+	position: relative;
+}
+section form{
+	display: flex;
+	height: 55px;
+	align-items: center;
+	color: #666666;
+}
+section form>*{
+	height: 35px;
+	line-height: 35px;
+	cursor: pointer;
+	padding-left: 10px;
+	width: 180px;
+	margin-right: 20px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;	
+	background-color: white;
+}
+section form dl{
+	display: flex;
+}
+section form dl dt{
+
+}
+section form dl dd{
+	height: 35px;
+	line-height: 35px;
+	border: 1px solid #666666;
+	display: none;
+}
+
+.date-wrap{
+	position: absolute;
+	top: 55px;
+	left: 200px;
+	background-color: #e9ecef;
+}

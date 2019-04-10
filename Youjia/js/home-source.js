@@ -3,33 +3,40 @@
 $.getJSON('static/homeSource.json',function(data){
 	console.log(data);
 	var house = data.source;
-	var post = document.creatDocumentFragement;
-	for(var i=0;i<house.length;i++){
-		var post = document.creatElement('div');
-		post.className = 'post';
+	console.log(house);
 
-		var post-top = document.creatElement('div');
-		var a = document.creatElement('a');
+	var hot_wrap = document.getElementsByClassName('hot-wrap')[0];
+	console.log(hot_wrap);
+	var post = document.createDocumentFragment();
+	for(var i=0;i<house.length;i++){
+		var post = document.createElement('div');
+		post.className = 'post';
+		console.log(post);
+
+		var post_top = document.createElement('div');
+		var a = document.createElement('a');
 		a.href = '#';
 		a.innerHTML = '<img src='+house[0].src[0]+' alt="" />';
-		post-top.appendChilde(a);
-		var h3 = document.creatElement('h3');
-		var i = document.creatElement('i');
+		post_top.appendChild(a);
+		var h3 = document.createElement('h3');
+		var i = document.createElement('i');
 		i.className = "iconfont icon-redu";
-		h3.appendChilde(i);
-		var span = document.creatElement('span');
+		h3.appendChild(i);
+		var span = document.createElement('span');
 		span.innerHTML = house[0].price;
-		h3.appendChilde(span);
-		post-top.appendChilde(h3);
-		post.appendChilde(post-top);
+		h3.appendChild(span);
+		post_top.appendChild(h3);
+		post.appendChild(post_top);
 
-		var post-bot = document.creatElement('div');
-		var h4= document.creatElement('h4');
+		var post_bot = document.createElement('div');
+		var h4= document.createElement('h4');
 		h4.innerHTML = house[0].houseName;
-		post-bot,appendChilde(h4);
+		post_bot.appendChild(h4);
 
-		post.appendChilde(post-bot);
+		post.appendChild(post_bot);
 	}
+	console.log(post);
+	hot_wrap.appendChild(post);
 });
 
 

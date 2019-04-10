@@ -43,3 +43,90 @@ section form dl dd{
 	left: 200px;
 	background-color: #e9ecef;
 }
+.content{
+	padding: 20px 30px;
+	box-sizing: border-box;
+}
+
+.hot-wrap{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.hot-wrap .post{
+	/*height: 450px;*/
+	width: 380px;
+}
+ .hot-wrap .post .post-top{
+	width: 380px;
+	height: 232px;
+	position: relative;
+}
+.hot-wrap .post .post-top a{
+	display: block;
+}
+ .hot-wrap .post .post-top a img{
+	height: 232px;
+	width: 380px;
+}
+.hot-wrap .post .post-top h3{
+	padding: 20px 20px;
+	background-color: #f0546a;
+	font-size: 18px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: white;
+}
+.hot-wrap .post .post-top h3 i{
+	font-size: 22px !important;
+	color: white !important; 
+}
+.hot-wrap .post .post-bot{
+	padding: 24px 0;
+}
+.hot-wrap .post .post-bot h4{
+	font-size: 24px;
+	color: #17181b;
+	margin-bottom: 20px;
+}
+.hot-wrap .post .post-bot ul{
+	height: 24px;
+}
+.hot-wrap .post .post-bot ul li{
+	float: left;
+	margin-right:16px ;
+	font-size: 14px;
+}
+.hot-wrap .post .post-bot ul li:last-child{
+	float: right;
+}
+.hot-wrap .post .post-bot ul li a{
+	color: #999999;
+}
+.hot-wrap .post .post-bot ul li i{
+	color: #f0546a !important;
+	font-size: 16px;
+}
+.hot-wrap .post .post-bot p{
+	margin-top: 10px;
+	font-size: 14px;
+	line-height: 30px;
+	color: #999999;
+}
+.hot-wrap .post .post-bot .order{
+	width: 120px;
+	height: 50px;
+	letter-spacing: 2px;
+	display: block;
+	margin-top: 24px;
+	margin-left: 10px;
+	font-size: 14px;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	background-color: #17181b;
+}
+.hot-wrap .post .post-bot .order:hover{
+	opacity: .9;
+}

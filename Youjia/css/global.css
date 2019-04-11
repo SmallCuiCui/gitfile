@@ -392,7 +392,6 @@ aside .cancel-btn i{
 	height:50px;
 	display: flex;
 	align-items: center;
-
 }
 .date-wrap .header h3{
 	flex:1;
@@ -434,5 +433,9 @@ aside .cancel-btn i{
 .date-wrap .datelist .xiuxi{
 	color:red;
 }
-
+.date-wrap .datelist .disabled{
+	pointer-events: none;
+	color: #cccccc;
+	disabled:disabled;
+}
 /*搜索框下的日历*/

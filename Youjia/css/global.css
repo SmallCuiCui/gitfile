@@ -386,6 +386,7 @@ aside .cancel-btn i{
 	padding:0 20px;
 	box-sizing: border-box;
 	display: none;
+	z-index: 10;
 }
 
 .date-wrap .header{

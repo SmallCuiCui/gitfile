@@ -4,15 +4,14 @@
 $(".aside-wrap").hide();//登录注册模块
 $(".have-p").hide();//登录模块中有账户，此时显示没有账户
 
-//var islogin;//标记用户是否登录
-
-islogin = false;
+var islogin;//标记用户是否登录
 
 if(localStorage.getItem('islogin') == null){
 	islogin = false;
 }else{
 	islogin = true;
 }
+//localStorage.setItem('islogin',false);
 
 if(!islogin){//未登录时显示登录注册
 	$(".login-li").show();
@@ -51,8 +50,7 @@ function playf(index){
 //登录注册交互
 
 $(".login-li").click(function() {
-	$(".aside-wrap").show();
-	$(".aside-wrap").show();
+	$(".aside-wrap").show(500);
 });
 //阻止冒泡
 $("aside").click(function(e){
@@ -92,17 +90,17 @@ $(".no-p .have-login").click(function(){
 
 // 点击空白处，登录注册隐藏
 $(".aside-wrap").click(function(){
-	$(this).hide();
+	$(this).hide(500);
 });
 //点击x隐藏登录注册
 $(".cancel-btn").click(function(){
-	$(".aside-wrap").hide();
+	$(".aside-wrap").hide(500);
 });
 
 //点击登录
 $(".login-btn").click(function(){
 	islogin = true;//标记为已登录
-	$(".aside-wrap").hide();
+	$(".aside-wrap").hide(500);
 	$(".self-li").show();
 	$(".login-li").hide();
 });

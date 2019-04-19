@@ -1,4 +1,50 @@
 		
+
+		// 首页轮播图
+		var index = 0;//标记当前播放的banner
+		var lastIndex = 0;//标记上一张显示的banner
+
+		var banners = document.querySelector('.banner_bg').querySelectorAll('li');
+		var btns = document.querySelector('.btns').querySelectorAll('li');
+		var goPre = document.querySelector('#goPrev');
+		var goNext = document.querySelector('#goNext');
+
+		var timer = null;
+
+		Array.from(btns).forEach(function(item,i){
+			item.onclick = function(){
+				index = i;
+				changeImg();
+			}
+		});
+		goPrev.onclick =function(){
+			if(--index < 0)index = banners.length - 1;
+			changeImg();
+		}
+		goNext.onclick =function(){
+			if(++index == banners.length)index = 0;
+			changeImg();
+		}
+		function autoPlay(){
+			setInterval(function(){
+				goNext.onclick();
+			},5000)
+		}
+		autoPlay();
+
+		function changeImg(){
+			banners[index].classList.add('ac');
+			banners[lastIndex].classList.remove('ac');
+
+			btns[index].classList.add('ac');
+			btns[lastIndex].classList.remove('ac');
+
+			lastIndex = index;
+		}
+
+
+
+
 		//点击选择日期，显示日历
 		$('.selectDate').click(function(){
 			$('.date-wrap').show();
@@ -44,7 +90,7 @@
 
 			if(clickNum % 2 ==1){//第一次点击，选择入住日期
 				inputVal = year +'/'+ month +'/'+selectDay;
-			
+
 			}else{//第二次点击，选择退房日期，并隐藏日历
 				inputVal = $(".selectDate").val();
 				inputVal += '~' + year +'/'+ month +'/'+selectDay;
@@ -52,7 +98,7 @@
 			}
 			
 			$(".selectDate").val (inputVal) ;	
-			});
+		});
 		}
 
 		function calender(date,num){

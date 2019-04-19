@@ -50,7 +50,7 @@ function playf(index){
 //登录注册交互
 
 $(".login-li").click(function() {
-	$(".aside-wrap").show(500);
+	$(".aside-wrap").show();
 });
 //阻止冒泡
 $("aside").click(function(e){
@@ -90,17 +90,17 @@ $(".no-p .have-login").click(function(){
 
 // 点击空白处，登录注册隐藏
 $(".aside-wrap").click(function(){
-	$(this).hide(500);
+	$(this).hide();
 });
 //点击x隐藏登录注册
 $(".cancel-btn").click(function(){
-	$(".aside-wrap").hide(500);
+	$(".aside-wrap").hide();
 });
 
 //点击登录
 $(".login-btn").click(function(){
 	islogin = true;//标记为已登录
-	$(".aside-wrap").hide(500);
+	$(".aside-wrap").hide();
 	$(".self-li").show();
 	$(".login-li").hide();
 });

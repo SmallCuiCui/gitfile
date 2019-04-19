@@ -9,7 +9,6 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: -1;
 	width: 100%;
 	height: 640px;
 }
@@ -26,9 +25,14 @@
 	left: 0;
 	-webkit-background-size: cover;
 	background-size: cover;
+	opacity: 0;
+	transition: opacity 1s;
+}
+.banner .banner_bg li.ac{
+	opacity: 1;
 }
 .banner .banner_bg li:nth-child(1){
-	background: url(../img/4.jpg) no-repeat center;
+	background: url(../img/1.jpg) no-repeat center;
 }
 .banner .banner_bg li:nth-child(2){
 	background: url(../img/2.jpg) no-repeat center;
@@ -37,7 +41,7 @@
 	background: url(../img/3.jpg) no-repeat center;
 }
 .banner .banner_bg li:nth-child(4){
-	background: url(../img/1.jpg) no-repeat center;
+	background: url(../img/4.jpg) no-repeat center;
 }
 
 .banner .banner_bg li .container{
@@ -78,13 +82,57 @@
 	color: #fff;
 	animation: btn_margin_c 0.5s ease-in;
 }
+.banner .btns{
+	position: absolute;
+	z-index: 100;
+	right: 40px;
+	bottom: 30px;
+	overflow: hidden;
+}
+.banner .btns li{
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-left: 10px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	background-color:white;
+}
+.banner .btns li.ac{
+	background-color:red;
+	color: white;
+}
+.banner>a{
+	position: absolute;
+	z-index: 100;
+	top: 40%;
+	font-size: 80px;
+	color: white;
+	background-color:rgba(0,0,0,.2);
+	width: 50px;
+	height: 80px;
+	line-height: 60px;
+	cursor: pointer;
+	text-align: center;
+}
+.banner #goPrev{
+	left: 0;
+}
+.banner #goNext{
+	right: 0;
+}
+
+
+
+
+/*搜索区*/
 .main_top .home-search{
 	position: absolute;
-	top: 290px;
+	top: 320px;
 	left: 400px;
 	height: 50px;
-	/*z-index: 100;*/
-	/*overflow: hidden;*/
+	z-index: 100;
 	animation: move 0.5s ease;
 }
 

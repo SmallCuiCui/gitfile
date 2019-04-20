@@ -33,12 +33,12 @@
 
 @keyframes move{
 	from{
-		top: 270px;
+		top: 290px;
 		left: 380px;
 		height: 0;
 	}
 	to{
-		top: 290px;
+		top: 320px;
 		left: 400px;
 		height: 50px;
 		}

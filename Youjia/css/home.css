@@ -9,7 +9,6 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: -1;
 	width: 100%;
 	height: 640px;
 }
@@ -26,9 +25,14 @@
 	left: 0;
 	-webkit-background-size: cover;
 	background-size: cover;
+	opacity: 0;
+	transition: opacity 1s;
+}
+.banner .banner_bg li.ac{
+	opacity: 1;
 }
 .banner .banner_bg li:nth-child(1){
-	background: url(../img/4.jpg) no-repeat center;
+	background: url(../img/1.jpg) no-repeat center;
 }
 .banner .banner_bg li:nth-child(2){
 	background: url(../img/2.jpg) no-repeat center;
@@ -37,7 +41,7 @@
 	background: url(../img/3.jpg) no-repeat center;
 }
 .banner .banner_bg li:nth-child(4){
-	background: url(../img/1.jpg) no-repeat center;
+	background: url(../img/4.jpg) no-repeat center;
 }
 
 .banner .banner_bg li .container{
@@ -50,56 +54,109 @@
 .banner .banner_bg li .container .banner_txt{
 	width: 400px;
 	height: 230px;
+	padding-left: 15px;  /*改变字体大小,增加了左边内填充*/
 }
 .banner .banner_bg li .container .banner_txt p{
 	font-size: 13px;
 	color: white;
 	letter-spacing: 2px;
-	margin-bottom: 8px;
+	margin-bottom: 20px;  /*增加填充,使中轴对齐*/
+	padding-top: 5px;
 }
 .banner .banner_bg li .container .banner_txt h3{
-	font-size: 40px;
-	text-shadow: 6px 6px 5px rgba(0,0,0,0.59);
-	font-weight: bold;
+	/*font-size: 40px;*/ 
+	font-size: 32px;
+	/*text-shadow: 6px 6px 5px rgba(0,0,0,0.59);*/  /*取消阴影*/
+	/*font-weight: bold;*/
+	font-weight: 400; 
 	letter-spacing: 2px;
 	color: #fff;
 }
 .banner .banner_bg li .container .banner_txt .btn{
 	display: inline-block;
-	margin-top: 48px;
+	margin-top: 55px;
 	width: 100px;
-	height: 48px;
-	line-height: 48px;
+	/*height: 48px;*/
+	/*line-height: 48px;*/
+	height: 40px;
+	line-height: 40px;
 	text-align: center;
-	font-size: 13px;
+	/*font-size: 13px;*/
+	font-size: 12px;
 	letter-spacing: 2px;
 	background: #f0546a;
-	border-radius: 4px;
+	border-radius: 5px;
 	color: #fff;
 	animation: btn_margin_c 0.5s ease-in;
 }
+.banner .btns{
+	position: absolute;
+	z-index: 100;
+	right: 40px;
+	bottom: 30px;
+	overflow: hidden;
+}
+.banner .btns li{
+	width: 20px;
+	height: 20px;
+	float: left;
+	margin-left: 10px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	background-color:white;
+}
+.banner .btns li.ac{
+	background-color:red;
+	color: white;
+}
+.banner>a{
+	position: absolute;
+	z-index: 100;
+	top: 45%;
+	font-size: 65px;
+	color: white;
+	background-color:rgba(0,0,0,.4);
+	width: 50px;
+	height: 70px;
+	line-height: 55px;
+	cursor: pointer;
+	text-align: center;
+}
+.banner #goPrev{
+	left: 0;
+}
+.banner #goNext{
+	right: 0;
+}
+
+
+
+
+/*搜索区*/
 .main_top .home-search{
 	position: absolute;
-	top: 290px;
+	top: 320px;
 	left: 400px;
 	height: 50px;
-	/*z-index: 100;*/
-	/*overflow: hidden;*/
+	z-index: 100;
 	animation: move 0.5s ease;
 }
 
 
 .main_top .home-search img{
 	float: left;
-	height: 45px;
-	margin-right: 10px;
+	height: 42px;
+	margin-right: 12px;
+	margin-top: 4px;
 }
 .main_top .home-search form{
 	height: 50px;
 	width: 600px;
 	float: left;
 	border-radius: 20px;
-	background-color: #fff;
+	/*/*background-color: #fff;*/  /*修改搜索框背景颜色透明度*/
+	background-color: rgba(255,255,255,0.8);
 	display: flex;
 	align-items: center;
 }
@@ -114,11 +171,13 @@
 	height: 25px;
 	border: none;
 	color: #333333;
-	border-right: 1px solid #CCCCCC;
-	background-color: white;
+	border-right: 1px solid #999;
+	/*background-color: white;*/
+	background: none;
 	flex: 3;
 	outline: none;
-	font-size: 16px;
+	font-size: 14px;   /*加了字距和改变字体大小*/
+	letter-spacing: 1px;
 }
 .main_top .home-search form input:nth-of-type(2){
 	border: none;
@@ -133,7 +192,7 @@
 	letter-spacing: 5px;
 	border-top-right-radius: 20px;
 	border-bottom-right-radius: 20px;
-	background-color: #f0546a;
+	background-color: rgba(240,85,105,0.9);
 }
 
 
@@ -189,7 +248,7 @@
 	height: 40px;
 	line-height: 40px;
 	padding: 0 15px;
-	font-size: 18px;
+	font-size: 15px;
 	border-radius: 5px;
 	font-family: 'Crimson Text', serif;
 }
@@ -216,9 +275,13 @@
 	margin-bottom: 24px;
 	position: relative;
 	border: 10px solid white;
+	overflow: hidden;
 }
 .main-content .price_first .hose_show dl:hover{
 	box-shadow:#999999 0 0 10px ;
+}
+.main-content .price_first .hose_show dl:hover p{
+	margin-top: 0px;
 }
 .main-content .price_first .hose_show dl dt{
 	position: absolute;
@@ -246,9 +309,9 @@
 	width: 50px;
 }
 .main-content .price_first .hose_show dl dd h4{
-	margin: 10px auto;
-	font-size: 20px;
-	font-weight: normal;
+	margin: 12px auto;
+	font-size: 16px;
+	font-weight: 500;
 	color: white;
 	text-align: center;
 }
@@ -258,20 +321,24 @@
 	line-height: 30px;
 	text-align: center;
 	margin: auto;
-	background-color: rgba(0,0,0,.3);
+	background-color:#ee697c;
 	font-size: 18px;
 	color: white;
+	margin-top: 46px;
+	transition: 1s;
 }
 
 .main-content .modle-box{
 	/*height: 600px;*/
-	padding: 48px 20px;
+	padding: 45px 20px;
 }
 .main-content .modle-box>h3{
 	text-align: center;
-	font-size: 36px;
+	font-size: 35px;
 	height: 48px;
 	color: #343a40;
+	font-weight: 500; /*字体变细*/
+	
 }
 .main-content .modle-box>p{
 	font-size: 15px;
@@ -304,7 +371,7 @@
 	width: 380px;
 }
 .main-content .hot_hose .hot-wrap .post .post-top h3{
-	padding: 20px 20px;
+	padding: 15px 15px;
 	background-color: #f0546a;
 	font-size: 18px;
 	position: absolute;
@@ -375,6 +442,7 @@
 }
 .main-content .travel_story>h3{
 	color: white;
+	margin-top: 8px;
 }
 .main-content .travel_story>p{
 	color: white;
@@ -489,18 +557,20 @@
 }
 .main-content .server_system .server-wrap dl dt p{
 	text-align: center;
-	font-size: 25px;
+	/*font-size: 25px;*/
+	font-size: 20px;
 	letter-spacing: 1px;
 	color: #333333;
 	/*font-weight: 600;*/
 	margin: 20px 0 10px;
 }
 .main-content .server_system .server-wrap dl dd{
-	font-size: 15px;
+	/*font-size: 15px;*/
+	font-size: 14px;
 	color: #999999;
 	letter-spacing: 1px;
 	text-align: center;
-	line-height: 1.9;
+	line-height: 25px;
 }
 
 /*服务保障*/
@@ -526,11 +596,13 @@ footer .foot-wrap .foot-logo a{
 	align-items: center;
 }
 footer .foot-wrap .foot-logo a img{
-	height: 50px;
-	width: 50px;
+	height: 48px;
+	width: 48px;
 	vertical-align: bottom;
+	background-color: #f0546a;  /*添加背景色,增强对比,其实也可以换成红色的那个标志,看你自己喜好*/
 }
 footer .foot-wrap .foot-logo a span{
+	padding-left: 5px;  /*新增*/
 	font-size: 36px;
 	font-weight: 700;
 	text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);

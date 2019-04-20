@@ -28,7 +28,7 @@ $.getJSON('static/homeSource.json',function(data){
 
 		var h3 = document.createElement('h3');
 		var i = document.createElement('i');
-		i.className = "iconfont icon-redu";
+		i.className = "iconfont icon-meiyuan";
 		h3.appendChild(i);
 		var span = document.createElement('span');
 

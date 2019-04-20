@@ -31,27 +31,32 @@ input{
 
 /*网页头，logo，导航*/
 header{
-	height: 80px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 16px 48px;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+	height: 120px;
+	width: 100%;
+	padding: 0 48px;
 }
 header .logo{
 	height: 54px;
+	float: left;
+	margin-top: 40px;
 }
 
 header .logo a{
+	margin-left: 15px;  /*新增*/
 	display: flex;
 	height: 54px;
 	align-items: center;
 }
 header .logo a img{
-	height: 50px;
-	width: 50px;
+	height: 48px;   /*修改logo尺寸*/
+	width: 48px;
 	vertical-align: bottom;
 }
 header .logo a span{
+	padding-left: 5px;  /*新增*/
 	font-size: 40px;
 	font-weight: 700;
 	text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
@@ -61,6 +66,9 @@ header .logo a span{
 
 header .menu{
 	height: 24px;
+	float: right;
+	margin-top: 45px;
+	margin-right: 45px;
 	display: flex;
 }
 header .menu li{
@@ -84,10 +92,11 @@ header .menu .menu_nav:hover ul{
 	display: block;
 }
 header .menu .menu_nav ul{
+	background: rgba(0,0,0,.5); /*背景颜色透明度*/
 	display: none;
     position: absolute;
     top: 25px;
-    background: #333;
+    /*background: #333;*/
     padding: 10px;
     -webkit-border-radius: 4px;
     -o-border-radius: 4px;
@@ -106,6 +115,10 @@ header .menu .menu_nav ul li{
     -ms-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+}
+	/* 改了ul背景透明度后    加了个hover 效果*/
+header .menu .menu_nav ul li:hover a{
+	color: #f0546a;
 }
 header .menu .menu_nav ul li a{
 	color: #fff;
@@ -126,18 +139,24 @@ header .menu .menu_nav ul li a{
 	top: 0;
 	right: 0;
 	display: none;
-	z-index: 1000px;
+	z-index: 100;
 	cursor: pointer;
 	background-color:rgba(255,255,255,.5);
 }
 aside{
+<<<<<<< HEAD
 	position: fixed;
 	z-index: 100px;
 	top: 100px;
+=======
+>>>>>>> 94e99864db4a36c5ed34bf49f43296ee44cf18c0
 	margin-left:250px;
 	width: 700px;
 	height: 400px;
+	position: absolute;
+	top: 200px;
 	background-color:white;
+	box-shadow: 0 0 3px #666666;
 }
 
 aside .login-box{

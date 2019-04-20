@@ -1,3 +1,6 @@
+body{
+	background-color: #F5F5F5;
+}
 .cont-top{
 	height: 80px;
 	padding-top: 20px;
@@ -31,8 +34,8 @@
 	letter-spacing: 2px;
 }
 .cont-top .cont-top-left .info p i{
-	margin-left: 10px;
-	color: #f0546a !important;
+	margin-left: 5px;
+	color: rgba(240, 84, 106,.7) !important;
 	font-size: 20px !important;
 }
 .cont-top .cont-top-left .info ul{
@@ -75,7 +78,6 @@
 }
 .cont-bot .cont-bot-left{
 	width: 25%;
-	height: 290px;
 	background-color: white;
 }
 .cont-bot .cont-bot-left ul{

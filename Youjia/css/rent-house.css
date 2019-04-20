@@ -14,14 +14,12 @@
 .confirm_box{
 	width: 450px;
 	height: 120px;
-	position: absolute;
-	top: 200px;
-	left: 500px;
+	margin: 200px auto;
 	padding-left: 20px;
 	box-sizing: border-box;
 	border: 1px solid #cccccc;
 	box-shadow: 0 0 3px #666666;
-	display: none;
+	background-color: white;
 }
 .confirm_box div{
 	margin: 10px;
@@ -47,37 +45,294 @@
 	background-color: rgba(72, 132, 242);
 	color: white;
 }
-.rent_top{
-	height: 100px;
-	/*background-color:white;*/
+
+.rent{
+padding-top: 20px;
+width: 900px !important;
 }
-.rent_top>div{
-	width: 70%;
-	margin: 0 auto;
+.rent>div{
+	margin-bottom: 20px;
+	padding: 20px;
+	padding-top: 10px;
+	box-sizing: border-box;
+	background-color: white;
+	/*border:1px solid rgba(0,0,0,.1);*/
+}
+.rent>div>h3{
+	font-size: 14px;
+	padding-left: 10px;
+	border-bottom:1px solid rgba(0,0,0,.1);
+	height: 50px;
+	letter-spacing: 1px;
+	color: rgb(240, 84, 106);
+	line-height: 50px;
+}
+.rent>div>div{
+	padding-top: 30px;
+	padding-left: 10px;
+	font-size: 14px;
+	color: #333333;
+}
+.rent>div>div>span{
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height:30px;
+
+}
+.rent .rent_adress .addAdress{
+	height: 30px;
+	line-height: 30px;
+	padding-bottom: 20px;
+	border-bottom:1px solid rgba(0,0,0,.1);
+}
+.rent .rent_adress div input{
+	width: 90px;
+	height: 30px;
+	margin-left: 15px;
+	margin-right: 2px;
+	line-height: 30px;
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 5px;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.rent .rent_adress div input:last-child{
+	width: 120px;
+}
+
+.rent .rent_adress .ren_addressDis p{
+	display: inline-block;
+	height: 28px;
+	line-height: 28px;
+	border:1px solid rgba(0, 0, 0,.1);
+	border-radius: 5px;
+	margin-top: -1px;
+}
+.rent .rent_adress .ren_addressDis p input{
+	width: 180px;
+	height: 28px;
+	line-height: 28px;
+	border: none;
+	margin-left: 0;
+	vertical-align: top;
+}
+.rent .rent_adress .ren_addressDis p a{
+	padding: 5px 15px;
+	vertical-align: top;
+	text-align: center;
+	color: white;
+	background-color: rgba(240, 84, 106,.7);
+	border-radius: 5px;
+	border: none;
+}
+.rent .rent_adress .ren_addressDis .addAdressSpan{
+	color: red;
+	font-size: 12px;
+	display: none;
+	letter-spacing: 1px;
+}
+.rent .rent_adress .ren_addressDis a i{
+	/*margin: 10px;*/
+	font-size: 16px !important;
+	color: white !important;
+	margin-right: 5px;
+}
+.rent .rent_adress .ren_addressDis p a span{
+	vertical-align: top;
+	margin-top: -5px;
+}
+.rent .rent_adress .ren_addressDis .adress_box{
+	margin-top: 10px;
+	height: 50px;
+	border: 1px solid rgba(0,0,0,.1);
+}
+.rent .rent_adress .ren_addressDis .adress_box li{
+	float: left;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 12px;
+	text-align: center;
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 5px;
+}
+
+.rent .rent_adress .ren_addressDis .adress_box li span{
+	float: right;
+	font-size: 20px;
+	color: rgba(240, 84, 106,1);
+	vertical-align: top;
+	line-height: 30px;
+	margin-right: 5px;
+	margin-top: -2px;
+	cursor: pointer;
+}
+
+.rent .basicInfo .uls ul{
+	overflow: hidden;
+}
+
+.rent .basicInfo .uls li{
+	float: left;
+	height: 32px;
+	line-height: 32px;
+	margin-right: 24px;
+}
+.rent .basicInfo .uls li select{
+	height: 30px;
+	border:1px solid rgba(0,0,0,.1);
+	border-radius: 5px;	
+	padding: 0 5px;
+	outline: none;
+}
+.rent .basicInfo .uls li select option{
+	border:1px solid rgba(0,0,0,.1);
+}
+.rent .basicInfo .uls li select option:hover{
+	background-color: rgba(240, 84, 106,.7);
+}
+.rent .basicInfo .uls:last-child select{
+	width: 80px;
+}
+.rent .houseDis .disOne input{
+	width: 200px;
+	height: 30px;
+	border:1px solid rgba(0,0,0,.2);
+}
+.rent .houseDis .houseDisWrap{
+	overflow: hidden;
+}
+.rent .houseDis .disTwo{
+	float: left;
+}
+.rent .houseDis .disThere{
+	float: right;
+}
+.rent .houseDis .disTwo textarea,.rent .houseDis .disThere textarea{
+	width: 300px;
+	height: 150px;
+	vertical-align: top;
+}
+.rent .equipInfo{
+	overflow:hidden;
+}
+.rent .equipInfo span{
+	width: 120px;
+}
+.rent .equipInfo ul{
+	width: 700px;
+	height: 220px;
+	padding-left: 10px;
+	float: right;
+	border:1px solid rgba(0,0,0,.2);
+}
+.rent .equipInfo ul li{
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin: 15px;
+	margin-bottom: 5px;
+	color: #999999;
+	float: left;
+	cursor: pointer;
+	border-radius: 5px;
+	border:1px solid rgba(0,0,0,.1);
+}
+.rent .equipInfo ul li.slc{
+	color: white;
+	background-color: rgba(0,0,0,.2);
+}
+.rent .imgsInfo{
+	overflow: hidden;
+}
+.rent .imgsInfo .imgsIn{
+	float: left;
+	margin: 50px 10px;
+	padding-bottom: 30px;
+	width: 200px;
+	border:1px solid rgba(0,0,0,.2);
+}
+.rent .imgsInfo .imgsIn p{
+	color: red;
+	font-size: 12px;
+	letter-spacing: 1px;
+	margin: 10px;
+	display: none;
+}
+.rent .imgsInfo .imgsWrap{
+	width: 600px;
+	min-height: 160px;
+	margin: 10px;
+	float: right;
+	border:1px solid rgba(0,0,0,.2);
+}
+.rent .imgsInfo .imgsWrap li{
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin: 20px;
 	overflow: hidden;
 	position: relative;
 }
-.rent_top div hr{
+.rent .imgsInfo .imgsWrap li span{
 	position: absolute;
-	width: 90%;
-	left: 5%;
-	top: 40px;
-	color: #cccccc;
+	top: 0;
+	right: 0;
+	color: red;
+	font-size: 20px;
+	padding: 0 5px;
+	cursor: pointer;
+	background-color: rgba(255,255,255,.8);
 }
-.rent_top ul{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	height: 80px;
+.rent .imgsInfo .imgsWrap li img{
+	height: 150px;
+	vertical-align: top;
+}
+.rent .pricInfo div{
+	overflow: hidden;
+}
+.rent .pricInfo div .left{
+	float: left;
+}
+.rent .pricInfo div .left p {
+	margin: 20px;
+}
+.rent .pricInfo div .left p:first-child{
+	margin-top: 0;
+}
+.rent .pricInfo div .left p input{
+	height: 30px;
+	width: 200px;
+	border:1px solid rgba(0,0,0,.2);
+}
+.rent .pricInfo div .otherInfo{
+	float: right;
+}
+.rent .pricInfo div .otherInfo textarea{
+	width: 350px;
+	height: 150px;
+	overflow: auto;
+	vertical-align: top;
+}
+
+.inforBtn{
+	background-color: white;
+	padding: 20px;
+}
+.inforBtn a{
+	display: block;
+	height: 50px;
+	width: 200px;
 	margin: 0 auto;
-	margin-top: 20px;
-}
-.rent_top ul li{
-	/*width: 100px;*/
-	height: 40px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	color: #999999;
+	line-height: 50px;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	letter-spacing: 2px;
+	background-color: rgba(240, 84, 106,.7);
 }

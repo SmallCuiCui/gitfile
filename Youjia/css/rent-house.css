@@ -48,27 +48,27 @@
 
 .rent{
 padding-top: 20px;
+width: 900px !important;
 }
 .rent>div{
 	margin-bottom: 20px;
-	padding-bottom: 20px;
+	padding: 20px;
+	box-sizing: border-box;
 	background-color: white;
 	/*border:1px solid rgba(0,0,0,.1);*/
 }
 .rent>div>h3{
 	font-size: 14px;
 	padding-left: 10px;
-	width: 95%;
-	margin: 0 auto;
 	border-bottom:1px solid rgba(0,0,0,.1);
 	height: 50px;
-	font-weight: normal;
-	color: #30c3a6;
+	letter-spacing: 1px;
+	color: rgb(240, 84, 106);
 	line-height: 50px;
 }
 .rent>div>div{
 	padding-top: 30px;
-	padding-left: 30px;
+	padding-left: 10px;
 	font-size: 14px;
 	color: #333333;
 }
@@ -83,11 +83,13 @@ padding-top: 20px;
 .rent .rent_adress .addAdress{
 	height: 30px;
 	line-height: 30px;
+	padding-bottom: 20px;
+	border-bottom:1px solid rgba(0,0,0,.1);
 }
 .rent .rent_adress div input{
-	width: 100px;
+	width: 90px;
 	height: 30px;
-	margin-left: 10px;
+	margin-left: 15px;
 	margin-right: 2px;
 	line-height: 30px;
 	border: 1px solid rgba(0,0,0,.1);
@@ -95,24 +97,49 @@ padding-top: 20px;
 	padding-left: 10px;
 	box-sizing: border-box;
 }
-.rent .rent_adress .ren_addressDis input{
-	width: 150px;
+.rent .rent_adress div input:last-child{
+	width: 120px;
 }
-.rent .rent_adress .ren_addressDis a{
+.rent .rent_adress .ren_addressDis p{
 	display: inline-block;
-	width: 80px;
-	height: 30px;
-	line-height: 30px;
-	vertical-align: top;
-	text-align: center;
+	height: 28px;
+	line-height: 28px;
+	border:1px solid rgba(0, 0, 0,.1);
 	border-radius: 5px;
-	color: #333333;
-	border:1px solid rgba(240, 84, 106,.6);
+	margin-top: -1px;
+}
+.rent .rent_adress .ren_addressDis p input{
+	width: 180px;
+	height: 28px;
+	line-height: 28px;
+	border: none;
+	margin-left: 0;
+	vertical-align: top;
+}
+.rent .rent_adress .ren_addressDis p a{
+	padding: 5px 15px;
+	vertical-align: top;
+
+	text-align: center;
+	color: white;
+	background-color: rgba(240, 84, 106,.7);
+	border-radius: 5px;
+	border: none;
+}
+.rent .rent_adress .ren_addressDis .addAdressSpan{
+	color: red;
+	font-size: 12px;
+	display: none;
+	letter-spacing: 1px;
 }
 .rent .rent_adress .ren_addressDis a i{
 	/*margin: 10px;*/
 	font-size: 24px !important;
 	color: #333333 !important;
+}
+.rent .rent_adress .ren_addressDis p a span{
+	vertical-align: top;
+	margin-top: -5px;
 }
 .rent .rent_adress .ren_addressDis .adress_box{
 	margin-top: 10px;

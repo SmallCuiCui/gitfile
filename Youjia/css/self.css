@@ -1,3 +1,6 @@
+body{
+	background-color: #F5F5F5;
+}
 .cont-top{
 	height: 80px;
 	padding-top: 20px;
@@ -75,7 +78,6 @@
 }
 .cont-bot .cont-bot-left{
 	width: 25%;
-	height: 290px;
 	background-color: white;
 }
 .cont-bot .cont-bot-left ul{

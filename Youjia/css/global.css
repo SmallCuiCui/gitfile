@@ -45,16 +45,18 @@ header .logo{
 }
 
 header .logo a{
+	margin-left: 15px;  /*新增*/
 	display: flex;
 	height: 54px;
 	align-items: center;
 }
 header .logo a img{
-	height: 50px;
-	width: 50px;
+	height: 48px;   /*修改logo尺寸*/
+	width: 48px;
 	vertical-align: bottom;
 }
 header .logo a span{
+	padding-left: 5px;  /*新增*/
 	font-size: 40px;
 	font-weight: 700;
 	text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
@@ -90,10 +92,11 @@ header .menu .menu_nav:hover ul{
 	display: block;
 }
 header .menu .menu_nav ul{
+	background: rgba(0,0,0,.5); /*背景颜色透明度*/
 	display: none;
     position: absolute;
     top: 25px;
-    background: #333;
+    /*background: #333;*/
     padding: 10px;
     -webkit-border-radius: 4px;
     -o-border-radius: 4px;
@@ -112,6 +115,10 @@ header .menu .menu_nav ul li{
     -ms-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+}
+	/* 改了ul背景透明度后    加了个hover 效果*/
+header .menu .menu_nav ul li:hover a{
+	color: #f0546a;
 }
 header .menu .menu_nav ul li a{
 	color: #fff;

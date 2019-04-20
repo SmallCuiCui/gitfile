@@ -51,6 +51,7 @@ $('.adress_box').click(function(e){
 	}
 });
 
+//设备标签选择
 $('.equipInfo').click(function(e){
 	
 	let target = e.target || e.srcElemtn;

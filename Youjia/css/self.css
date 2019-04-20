@@ -34,8 +34,8 @@ body{
 	letter-spacing: 2px;
 }
 .cont-top .cont-top-left .info p i{
-	margin-left: 10px;
-	color: #f0546a !important;
+	margin-left: 5px;
+	color: rgba(240, 84, 106,.7) !important;
 	font-size: 20px !important;
 }
 .cont-top .cont-top-left .info ul{

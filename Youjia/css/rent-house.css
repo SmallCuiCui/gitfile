@@ -135,8 +135,9 @@ width: 900px !important;
 }
 .rent .rent_adress .ren_addressDis a i{
 	/*margin: 10px;*/
-	font-size: 24px !important;
-	color: #333333 !important;
+	font-size: 16px !important;
+	color: white !important;
+	margin-right: 5px;
 }
 .rent .rent_adress .ren_addressDis p a span{
 	vertical-align: top;

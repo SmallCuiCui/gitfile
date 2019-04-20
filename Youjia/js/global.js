@@ -6,13 +6,12 @@ $(".have-p").hide();//登录模块中有账户，此时显示没有账户
 
 var islogin;//标记用户是否登录
 
-//islogin = false;
-
 if(localStorage.getItem('islogin') == null){
 	islogin = false;
 }else{
 	islogin = true;
 }
+//localStorage.setItem('islogin',false);
 
 if(!islogin){//未登录时显示登录注册
 	$(".login-li").show();
@@ -51,7 +50,6 @@ function playf(index){
 //登录注册交互
 
 $(".login-li").click(function() {
-	$(".aside-wrap").show();
 	$(".aside-wrap").show();
 });
 //阻止冒泡

@@ -76,8 +76,9 @@ section form dl dd{
 	width: 100%;
 }
 .hot-wrap .post .post-top h3{
-	padding: 10px 20px;
-	background-color: rgba(240, 84, 106,.6);
+	padding: 6px 14px;
+	/*padding: 10px 20px;*/
+	background-color: rgba(240, 84, 106,.8);
 	font-size: 18px;
 	position: absolute;
 	bottom: 0;
@@ -108,10 +109,10 @@ section form dl dd{
 	color:rgba(240, 84, 106) !important;
 }
 .hot-wrap .post .post-bot{
-	padding: 10px 0;
+	padding: 15px 0;
 }
 .hot-wrap .post .post-bot h4{
-	font-size: 22px;
+	font-size: 20px;
 	color: #17181b;
 	margin-bottom: 5px;
 }
@@ -127,7 +128,7 @@ section form dl dd{
 	font-size: 16px;
 }
 .hot-wrap .post .post-bot p{
-	font-size: 14px;
+	font-size: 12px;
 	color: #999999;
 	margin: 10px 0;
 }
@@ -153,6 +154,10 @@ section form dl dd{
 	text-align: center;
 	color: #666666;
 	border: 1px solid rgba(0,0,0,.2);
+	margin: 15px;
+}
+.content .show_more:hover{
+	color: rgb(240,85,105 );
 }
 .content .show_more .more_btn{
 	cursor: pointer;

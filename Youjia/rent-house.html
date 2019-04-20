@@ -157,31 +157,196 @@
 							<input type="text" name=""/ placeholder = '详细'>详细楼号
 						</div>
 						<div class="ren_addressDis">
-							<span>地址标签:</span>
+							<span>个性标签:</span>
 							<p>
-								<input type="text"  name="" placeholder="好的标签更受青睐！">
+								<input type="text"  class="addtipInput" placeholder="好的标签更受青睐！">
 								<a href="javascript:;" class="addAdressBtn"><i class="iconfont "></i><span>添加</span></a>
 							</p>
 							<span class="addAdressSpan">*请输入内容</span>
-							<div class="adress_box"></div>
+							<ul class="adress_box">
+								<li>成都北站<span>x</span></li>
+								<li>靠近地铁<span>x</span></li>
+								<li>宽窄巷子<span>x</span></li>
+							</ul>
 							
 						</div>
 					</div>
-					<div>
+					<div class="basicInfo">
 						<h3>房源基本情况</h3>
+						<div class="uls">
+							<ul>
+								<li>
+									<span>房屋类型</span>
+									<select>
+										<option>民宅</option>
+										<option>普通公寓</option>
+										<option>精品客栈</option>
+										<option>乡村名宿</option>
+									</select>
+								</li>
+								<li>
+									<span>出租类型</span>
+									<select>
+										<option>整套出租</option>
+										<option>独立单间</option>
+										<option>合住房间</option>
+									</select>
+								</li>
+								<li>
+									<span>卫生间类型</span>
+									<select>
+										<option>独立卫生间</option>
+										<option>公用卫生间</option>
+									</select>
+								</li>
+								<li>
+									<span>床铺信息</span>
+									<select>
+										<option>1床</option>
+										<option>2床</option>
+										<option>3床</option>
+										<option>4床</option>
+										<option>5床</option>
+									</select>
+								</li>
+								<li>
+									<span>宜居人数</span>
+									<select>
+										<option>1-2人</option>
+										<option>3-5人</option>
+										<option>6-8人</option>
+										<option>8+人</option>
+									</select>
+								</li>
+							</ul>
+						</div>
+						<div class="uls">	
+							<ul>
+								<li>房屋户型：</li>
+								<li>
+									<select>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+									</select>
+									<span>室</span>
+								</li>
+								<li>
+									<select>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+									</select>
+									<span>厅</span>
+								</li>
+								<li>
+									<select>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+									</select>
+									<span>卫</span>
+								</li>
+								<li>
+									<select>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+									</select>
+									<span>厨</span>
+								</li>
+								<li>
+									<select>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+									</select>
+									<span>阳台</span>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<div>
+					<div class="houseDis">
 						<h3>房源描述</h3>
+						<div class="disOne">
+							名宿名称
+							<input type="text" class="houseName" name="">
+						</div>
+						<div class="houseDisWrap">
+							<div class="disTwo">
+								<span>名宿描述:</span>
+								<textarea></textarea>
+							</div>
+							<div class="disThere">
+								<span>房东留言:</span>
+								<textarea></textarea>
+							</div>
+						</div>
+						
 					</div>
-					<div>
+					<div class="equipInfo">
 						<h3>配套设施</h3>
+						<div>
+							<span>选择已有配套设施:</span>
+							<ul>
+								<li>热水淋浴</li>
+								<li>空调</li>
+								<li>无线网络</li>
+								<li>门禁系统</li>
+								<li>电视</li>
+								<li>洗衣机</li>
+								<li>电梯</li>
+								<li>冰箱</li>
+								<li>暖气</li>
+								<li>电视</li>
+								<li>饮水设备</li>
+								<li>香皂</li>
+								<li>沐浴 洗发水</li>
+								<li>牙具</li>
+								<li>毛巾</li>
+								<li>拖鞋</li>
+								<li>停车位</li>
+								<li>允许吸烟</li>
+								<li>允许带宠物</li>
+								<li>允许聚会</li>
+							</ul>
+						</div>
+						
 					</div>
-					<div>
+					<div class="imgsInfo">
 						<h3>真实图片</h3>
+						<div class="imgsIn">
+							<input type="file" id="chooseImage" name="file">
+							<p class="numIng">*最多上传9张图片</p>
+							<p class="docIng">*请上传图片格式文件(.png.jpg.jpeg)</p>
+						</div>
+						<ul class="imgsWrap">
+
+							<li><span>x</span><img src="img/price2.jpg"></li>
+						</ul>
 					</div>
-					<div>
+					<div class="pricInfo">
 						<h3>价格规格</h3>
+						<div>
+							<div class="left">
+								<p>押金：<input type="text" name=""></p>
+								<p>价格：<input type="text " name="">起(/晚)</p>
+								<p>优惠：<input type="text" name=""></p>
+							</div>
+							<p class="otherInfo">其他额外费用备注：<textarea></textarea></p>
+						</div>
 					</div>
+
+					
+				</div>
+
+				<div class="inforBtn">
+					<a href="javascript:;" id="subBtn">立即发布</a>
 				</div>
 		</div>
 

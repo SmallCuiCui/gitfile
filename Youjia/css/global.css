@@ -144,13 +144,13 @@ header .menu .menu_nav ul li a{
 	background-color:rgba(255,255,255,.5);
 }
 aside{
-<<<<<<< HEAD
 	position: fixed;
 	z-index: 100px;
-	top: 100px;
-=======
->>>>>>> 94e99864db4a36c5ed34bf49f43296ee44cf18c0
-	margin-left:250px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
 	width: 700px;
 	height: 400px;
 	position: absolute;

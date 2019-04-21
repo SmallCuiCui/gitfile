@@ -42,5 +42,11 @@ $('.save').click(function(){
 	$(this).parent().parent().children('div').children('p').children('input').attr('disabled',true).removeClass('ed');
 	$(this).hide();//隐藏保存
 	$(this).siblings('.edit').show();//显示编辑
+});
+
+//点击发表故事
+$('.fabiaoBtn').click(function(){
+	window.location.href = 'file:///D:/%E6%AF%95%E8%AE%BE/gitfile/Youjia/story.html';
+	
 })
 

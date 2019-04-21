@@ -25,7 +25,7 @@ if(localStorage.getItem('islogin') == null || localStorage.getItem('islogin') ==
 	$('.toHome').click(function(){
 		$('.confirm_box').hide();
 		$('.confirm_wrap').hide();
-		window.location.href = 'file:///E:/%E6%AF%95%E8%AE%BE/gitfile/Youjia/home.html';
+		window.location.href = 'file:///D:/%E6%AF%95%E8%AE%BE/gitfile/Youjia/home.html';
 	});
 }
 

@@ -11,66 +11,46 @@ $.getJSON('static/homeSource.json',function(data){
 	var hot_wrap = document.querySelector('.hot-wrap');
 	var post = document.creatDocumentFragement;
 
-	$.each(house,function(index,value){
+	$.each(house,function(index,item){
 
-		var post = document.createElement('div');
-		post.className = 'post';
-		console.log(post);
+		var _html = `
 
-		var post_top = document.createElement('div');
+			<div class="post">
+						<div class="post-top">
+							<a href="javascript:;">
+								<img src="img/price1.jpg" alt="" />
+							</a>
+							<h3>
+								<i class="iconfont icon-redu"></i>
+								<span>${item.price}</span>
+							</h3>
+							<span class='unlike'>
+								<i class="iconfont icon-shoucang"></i>
+							</span>
+						</div>
+						<div class="post-bot">
+							<h4>
+								<span>${item.houseName}</span>
+								<a href="#">
+									<i class="iconfont icon-didian"></i>
+									<span>${item.address}</span>
+								</a>
+							</h4>
+							<ul class = 'rentClass'>
+								<li>${item.rent_class[0]}</li>
+								<li>${item.rent_class[1]}</li>
+								<li>${item.rent_class[2]}</li>
+								<li>${item.rent_class[3]}</li>
+							</ul>
+							<p>${item.addressDis}</p>
+							
+						</div>
+						
+					</div>
+		`;
 
-		post_top.className = 'post-top';
+		document.querySelector('.hot-wrap').innerHTML += _html;
 
-		var a = document.createElement('a');
-		a.href = '#';
-		a.innerHTML = '<img src='+value.src[0]+' alt="" />';
-		post_top.appendChild(a);
-
-		var h3 = document.createElement('h3');
-		var i = document.createElement('i');
-		i.className = "iconfont icon-meiyuan";
-		h3.appendChild(i);
-		var span = document.createElement('span');
-
-		span.innerHTML = value.price + '/晚';
-		h3.appendChild(span);
-		post_top.appendChild(h3);
-
-		var _span = document.createElement('span');
-		_span.className = 'unlike';
-		_span.innerHTML = '<i class="iconfont icon-shoucang"></i>';
-		post_top.appendChild(_span);
-		post.appendChild(post_top);
-
-		var post_bot = document.createElement('div');
-		post_bot.className = 'post-bot';
-
-		var _h4= document.createElement('h4');
-		var _span = document.createElement('span');
-		_span.innerHTML = value.houseName;
-		_h4.appendChild(_span);
-		var _a = document.createElement('a');
-		_a.href = '#';
-		_a.innerHTML = '<i class="iconfont icon-didian"></i>';
-		var _span = document.createElement('span');
-		_span.innerHTML = value.address;
-		_a.appendChild(_span);
-		_h4.appendChild(_a);
-		post_bot.appendChild(_h4);
-		var _ul = document.createElement('ul');
-		$.each(value.rent_class,function(index,value){
-			var _li = document.createElement('li');
-			_li.innerHTML = value;
-			_ul.appendChild(_li);
-		})
-		post_bot.appendChild(_ul);
-
-		var _p = document.createElement('p');
-		_p.innerHTML = value.addressDis;
-		post_bot.appendChild(_p);
-
-		post.appendChild(post_bot);
-		hot_wrap.appendChild(post);
 
 	});
 
@@ -110,3 +90,23 @@ $('.more_btn').click(function(){
 	$(this).siblings().show(1);
 	$(this).hide();
 })
+
+//点击某一民宿，展示民宿信息
+$('.hot-wrap').click(function(e){
+	var target = e.target;
+	if(target.nodeName == 'IMG'){
+		$('.content').hide();
+		$('.houseInfo').show();
+
+	}
+})
+
+//点击民宿下的导航，返回房源区
+$('.fangyuan').click(function(){
+	$('.content').show();
+	$('.houseInfo').hide();
+});
+$('.dress').click(function(){
+	$('.content').show();
+	$('.houseInfo').hide();
+});

@@ -137,7 +137,7 @@
 .main_top .home-search{
 	position: absolute;
 	top: 320px;
-	left: 400px;
+	left: 500px;
 	height: 50px;
 	z-index: 100;
 	animation: move 0.5s ease;
@@ -264,7 +264,8 @@
 .main-content .price_first .hose_show{
 	/*height: 650px;*/
 	display: flex;
-	justify-content: space-between;
+	/*justify-content: space-between;*/
+	justify-content: space-around;
 	align-content: space-between;
 	flex-wrap: wrap;
 }

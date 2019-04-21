@@ -1,4 +1,6 @@
 
+//全局变量，记录显示的民宿Id
+var showIndex = '';
 
 //刚进入页面，部分模块隐藏
 $(".aside-wrap").hide();//登录注册模块
@@ -11,6 +13,7 @@ if(localStorage.getItem('islogin') == null){
 }else{
 	islogin = true;
 }
+
 //localStorage.setItem('islogin',false);
 
 if(!islogin){//未登录时显示登录注册

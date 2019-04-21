@@ -40,7 +40,7 @@ $('.okBtn').click(function(){
 
 	let date = new Date();
 	var year = date.getFullYear(),
-		month = date.getMonth(),
+		month = date.getMonth() + 1,
 		day = date.getDate(),
 		h = date.getHours(),
 		m = date.getMinutes();

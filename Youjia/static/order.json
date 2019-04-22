@@ -18,8 +18,8 @@
       		"customerId":""
       	}
       ],
-      "startTime": "",
-      "endTime": "",
+      "houseTime": "",
+      "orderTime": "",
       "state":"订单状态"
     },
     {
@@ -38,8 +38,8 @@
       		"customerId":""
       	}
       ],
-      "startTime": "",
-      "endTime": "",
+      "houseTime": "",
+      "orderTime": "",
       "state":"订单状态"
     }
 ]

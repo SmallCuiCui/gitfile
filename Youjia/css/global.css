@@ -73,6 +73,10 @@ header .menu{
 }
 header .menu li{
 	font-size: 15px;
+	padding:5px 10px;
+	height: 24px;
+	line-height: 24px;
+	vertical-align: middle;
 	letter-spacing: 1px;
 	margin-right: 20px;
 	animation: margin_c 0.5s ease;

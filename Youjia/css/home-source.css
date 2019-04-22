@@ -31,7 +31,21 @@ section form>*{
 	border-radius: 5px;	
 	background-color: white;
 }
-section form input:first-child{
+section form div{
+	border: none;
+}
+section form div a{
+	display: inline-block;
+	color: white;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 5px;
+	background-color: rgba(240, 84, 106,.8);
+	color:white;
+}
+section form input{
 	cursor: text;
 }
 section form dl{
@@ -64,7 +78,7 @@ section form dl dd{
 	padding: 20px;
 	box-sizing: border-box;
 	background-color: white;
-	
+	display: none;;
 }
 .content.hide{
 	display: none;
@@ -194,7 +208,7 @@ section form dl dd{
 /*房源展示*/
 .houseInfo{
 	width: 68%;
-	display: none;
+	/*display: none;*/
 	margin-left: 30px;
 	margin-top: 20px;
 	background-color: white;
@@ -211,15 +225,22 @@ section form dl dd{
 }
 .houseInfo .housecont .orderTop h3 i{
 	float: right;
+	color: #cccccc;
+	cursor: pointer;
+}
+.houseInfo .housecont .orderTop h3 span{
+	font-size: 12px;
+	float: right;
 	margin-right: 30px;
-	color: #666666;
+	cursor: pointer;
+	color: #cccccc;
 }
 .houseInfo .housecont .orderTop h3 i.ac{
 	color: #f0546a;
 	margin-right: 5px;
 }
 .houseInfo .housecont .orderTop p{
-	font-size: 12px;
+	font-size: 14px;
 	margin-bottom: 20px;
 	padding-left: 20px;
 }
@@ -242,24 +263,24 @@ section form dl dd{
 	width: 100%;
 	height: 100%;
 }
-.houseInfo .housecont .orderImgs ul{
+.houseInfo .housecont .orderImgs>ul{
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 }
-.houseInfo .housecont .orderImgs ul li{
+.houseInfo .housecont .orderImgs>ul li{
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	opacity: 0;
 }
-.houseInfo .housecont .orderImgs ul li:first-child{
+.houseInfo .housecont .orderImgs>ul li.ac{
 	opacity: 1;
 }
 
-.houseInfo .housecont .orderImgs ol{
+.houseInfo .housecont .orderImgs>ol{
 	position: absolute;
 	bottom: 0;
 	height: 100px;
@@ -270,10 +291,171 @@ section form dl dd{
 	align-items:center;
 	background-color: rgba(255,255,255,.2);
 }
-.houseInfo .housecont .orderImgs ol li{
+.houseInfo .housecont .orderImgs>ol li{
 	width: 80px;
 	height: 60px;
 	cursor: pointer;
+}
+.houseInfo .housecont .orderImgs>ol li.ac{
+	border: 3px solid white;
+}
+
+.houseInfo .housecont .orderModel>ul{
+	background-color: white;
+	height: 50px;
+	width: 80%;
+	margin: 0 auto;
+	border-bottom: 1px solid rgba(0,0,0,.3);
+	line-height: 50px;
+}
+.houseInfo .housecont .orderModel>ul li{
+	float: left;
+	color: #333333;
+	font-size: 16px;
+	margin-left: 10px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.houseInfo .housecont .orderModel>ul li.ac{
+	color: rgba(240, 84, 106,1);
+}
+
+.houseInfo .housecont .orderModel .model{
+	position: relative;
+	width: 80%;
+	height: 300px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.houseInfo .housecont .orderModel .model>div{
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 200px;
+	background-color: white;
+	/*border: 1px solid red;*/
+	top: 0;
+	left: 0;
+}
+.houseInfo .housecont .orderModel .model>div.ac{
+	display: block;
+}
+.houseInfo .housecont .orderModel .model div h3{
+	height: 80px;
+	line-height: 80px;
+	color: #333333;
+	font-size: 30px;
+}
+.houseInfo .housecont .orderModel .model div h3 i{
+	font-size: 32px;
+}
+.houseInfo .housecont .orderModel .model div h4{
+	font-size: 24px;
+	height: 50px;
+	line-height: 50px;
+}
+.houseInfo .housecont .orderModel .model div h4 i{
+	font-size: 28px;
+}
+.houseInfo .housecont .orderModel .model div p{
+	font-size: 14px;
+	line-height: 24px;
+	color: #999999;
+	letter-spacing: 1px;
+}
+.houseInfo .housecont .orderModel .model .model_house p:last-child{
+	font-size: 12px;
+}
+.houseInfo .housecont .orderModel .model .model_house ul{
+	display: flex;
+	width: 100%;
+	height: 100px;
+	align-items: center;
+	justify-content: space-around;
+}
+.houseInfo .housecont .orderModel .model .model_house ul li{
+	width: 23%;
+	height: 80px;
+	border-right: 1px solid rgba(0,0,0,.1);
+	display: flex;
+	color: #999999;
+	flex-direction: column; 
+	align-items:center; 
+	justify-content: space-between;
+}
+.houseInfo .housecont .orderModel .model .model_house ul li:last-child{
+	border:none;
+}
+.houseInfo .housecont .orderModel .model .model_house ul li i{
+	font-size:50px !important;
+	color: #999999 !important;
+}
+.houseInfo .housecont .orderModel .model .position>div{
+	float: left;
+	width: 45%;
+	margin-top: 10px;
+	border-right: 1px solid rgba(0,0,0,.1);
+}
+.houseInfo .housecont .orderModel .model .position>div:last-child{
+	margin-top: 30px;
+	margin-left: 20px;
+	border-right: none;
+}
+.houseInfo .housecont .orderModel .model .something ul{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 10px;
+}
+
+.houseInfo .housecont .orderModel .model .something ul li{
+	width: 33%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #999999;
+	text-align: center;
+}
+.houseInfo .housecont .orderModel .model .something ul li i{
+	font-size: 18px;
+	margin-right: 10px;
+}
+.houseInfo .housecont .orderModel .model .comments h3{
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	margin-bottom: 20px;
+}
+.houseInfo .housecont .orderModel .model .comments ul li{
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	margin-bottom: 20px;
+}
+.houseInfo .housecont .orderModel .model .comments ul li>div>p:first-child{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: inline-block;
+	overflow: hidden;
+}
+.houseInfo .housecont .orderModel .model .comments ul li>div>p:last-child{
+	display: inline-block;
+	margin-left: 10px;
+}
+.houseInfo .housecont .orderModel .model .comments ul li>div p img{
+	width: 50px;
+
+	display: inline-block;
+}
+.houseInfo .housecont .orderModel .model .comments ul li div p font{
+	display:block;
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+	color: #333333;
+}
+.houseInfo .housecont .orderModel .model .comments ul li p span{
+	font-size: 12px;
+}
+.houseInfo .housecont .orderModel .model .comments ul li p:last-child{
+	margin-bottom: 10px;
+	color: #333333;
 }
 /*房源展示*/
 
@@ -281,12 +463,34 @@ section form dl dd{
 
 /*预定box*/
 .houseInfo .orderBox{
-	position: fixed;
+	position: absolute;
 	top: 295px;
 	right: 30px;
 	width: 25%;
-	height: 300px;
+	height: 500px;
+	padding:15px 30px;
+	box-sizing: border-box;
 	background-color: white;
-	border: 1px solid red;
+	border: 1px solid rgba(0,0,0,.1);
+}
+.houseInfo .orderBox.ac{
+	position: fixed;
+	top: 10px;
+	right: 30px;
+}
+
+.houseInfo .orderBox h4{
+	height: 40px;
+	line-height: 40px;
+	font-size: 26px;
+}
+.houseInfo .orderBox h4 i{
+	font-size: 24px;
+	margin-right: 0;
+} 
+.houseInfo .orderBox h4 font{
+	margin-left: 5px;
+	vertical-align: text-top;
+	font-size: 12px;
 }
 /*预定box*/

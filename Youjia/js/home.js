@@ -1,155 +1,89 @@
+
+
+// 首页轮播图
+var index = 0;//标记当前播放的banner
+var lastIndex = 0;//标记上一张显示的banner
+
+var banners = document.querySelector('.banner_bg').querySelectorAll('li');
+var btns = document.querySelector('.btns').querySelectorAll('li');
+var goPre = document.querySelector('#goPrev');
+var goNext = document.querySelector('#goNext');
+
+var timer = null;
+
+Array.from(btns).forEach(function(item,i){
+	item.onclick = function(){
+		index = i;
+		changeImg();
+	}
+});
+goPrev.onclick =function(){
+	if(--index < 0)index = banners.length - 1;
+	changeImg();
+}
+goNext.onclick =function(){
+	if(++index == banners.length)index = 0;
+	changeImg();
+}
+function autoPlay(){
+	setInterval(function(){
+		goNext.onclick();
+	},5000)
+}
+autoPlay();
+
+function changeImg(){
+	banners[index].classList.add('ac');
+	banners[lastIndex].classList.remove('ac');
+
+	btns[index].classList.add('ac');
+	btns[lastIndex].classList.remove('ac');
+
+	lastIndex = index;
+}
+
+
+
+
+//点击选择日期，显示日历
+$('.selectDate').click(function(){
+	$('.date-wrap').show();
+}).siblings().click(function(){
+	$('.date-wrap').hide();
+});
+//调用globle函数，绘制日历
+rili();
+
+
+//渲染首页特惠房源
+showPrice();
+function showPrice(){
+	var hose_show = document.getElementById('hose_show');
+	let _html = '';
+	for(let i=0;i<6;i++){
+		_html += `
+			<dl href="#">
+						<dt class='jumpToHouse' style = 'background: url(img/house1/${i+1}.jpg) no-repeat center;background-size: 100%;'></dt>
+						<dd>
+							<a href="#"><img src="img/t${i}.jpg" /></a>
+							<h4>白书民宿的家</h4>
+							<p>￥456</p>
+						</dd>
+					</dl>
+		`;
+	}
+	hose_show.innerHTML = _html;
+}
+
+
+document.querySelector('.hose_show').onclick = function(e){
+	var target = e.target;
+	if(target.nodeName == 'DT'){
+
+		//还未实现跳转并显示房源信息
+		//houseShow();
+
+		window.location.href = 'file:///D:/%E6%AF%95%E8%AE%BE/gitfile/Youjia/home-source.html';
 		
-
-		// 首页轮播图
-		var index = 0;//标记当前播放的banner
-		var lastIndex = 0;//标记上一张显示的banner
-
-		var banners = document.querySelector('.banner_bg').querySelectorAll('li');
-		var btns = document.querySelector('.btns').querySelectorAll('li');
-		var goPre = document.querySelector('#goPrev');
-		var goNext = document.querySelector('#goNext');
-
-		var timer = null;
-
-		Array.from(btns).forEach(function(item,i){
-			item.onclick = function(){
-				index = i;
-				changeImg();
-			}
-		});
-		goPrev.onclick =function(){
-			if(--index < 0)index = banners.length - 1;
-			changeImg();
-		}
-		goNext.onclick =function(){
-			if(++index == banners.length)index = 0;
-			changeImg();
-		}
-		function autoPlay(){
-			setInterval(function(){
-				goNext.onclick();
-			},5000)
-		}
-		autoPlay();
-
-		function changeImg(){
-			banners[index].classList.add('ac');
-			banners[lastIndex].classList.remove('ac');
-
-			btns[index].classList.add('ac');
-			btns[lastIndex].classList.remove('ac');
-
-			lastIndex = index;
-		}
-
-
-
-
-		//点击选择日期，显示日历
-		$('.selectDate').click(function(){
-			$('.date-wrap').show();
-		}).siblings().click(function(){
-			$('.date-wrap').hide();
-		});
-
-		var clickNum = 0;
-
-		//实际的今天日期
-		var date = new Date();
-
-		//如果点击上下个月，记录月份差
-		var num = 0;
-		var preMonth = document.getElementById('preMonth');
-		var nextMonth = document.getElementById('nextMonth');
-
-		calender(date,num);
-		
-		preMonth.onclick = function(){
-			date = new Date();
-			num--;
-			calender(date,num);
-		}
-		nextMonth.onclick = function(){
-			date = new Date();
-			num++;
-			calender(date,num);
-		}
-
-		
-		
-		function selectDay(){
-			$(".datelist li").click(function(){
-			//console.log(111111);
-			clickNum++;
-			var inputVal="";
-
-			var dateStr = $('#title').text();//获取日历的年月
-			var year = dateStr.substring(0,dateStr.indexOf('年'));
-			var month = dateStr.substring(dateStr.indexOf('年')+1,dateStr.indexOf('月'));
-			var selectDay = $(this).text();//获取点击的号数
-
-			if(clickNum % 2 ==1){//第一次点击，选择入住日期
-				inputVal = year +'/'+ month +'/'+selectDay;
-
-			}else{//第二次点击，选择退房日期，并隐藏日历
-				inputVal = $(".selectDate").val();
-				inputVal += '~' + year +'/'+ month +'/'+selectDay;
-				$('.date-wrap').hide();
-			}
-			
-			$(".selectDate").val (inputVal) ;	
-		});
-		}
-
-		function calender(date,num){
-			var title = document.getElementById("title");
-			var datelist = document.getElementById('datelist');
-			var str="";//日期字符串
-
-			//更改日期到指定月份，默认是当月，num=0
-			date.setMonth(date.getMonth() + num);
-
-			//获取当前选中日期
-			var year = date.getFullYear();
-			var month = date.getMonth() + 1;
-			var day = date.getDate();
-			//设置日期
-			title.innerHTML = year +'年'+ month +'月';
-
-			date.setDate(1);//把时间调到本月1号，以查看是星期几
-			var index = date.getDay();
-
-			date.setMonth(month+1,0);//时间调到本月最后一天，即下月的第0天，自动回退到本月的最后一天
-			var alldays = date.getDate();
-			for(var i=0;i<index;i++){
-				str +="<li class='disabled'></li>";
-			}
-
-			for(i=1;i<=alldays;i++){
-
-				if((i < day && num == 0) || num < 0){//今天之前
-
-					if((index+i)%7 == 0 || (index+i)%7 == 1){//周末
-						str += '<li class="disabled xiuxi">'+ i +'</li>';
-					}else{//非周末
-						str += '<li class="disabled">'+ i +'</li>';
-					}
-					
-				}else if(i == day && num==0){//今天
-					str += '<li class="today">'+ i +'</li>';
-					
-				}else{//今天之后
-					if((index+i)%7 == 0 || (index+i)%7 == 1){//周末
-						str += '<li class="xiuxi">'+ i +'</li>';
-					}else{//非周末
-						str += '<li>'+ i +'</li>';
-					}
-					
-				}
-
-				
-				
-			}
-			datelist.innerHTML = str;
-			selectDay();
-		}
+	}
+}

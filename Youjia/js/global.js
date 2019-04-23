@@ -14,7 +14,6 @@ if(localStorage.getItem('islogin') == null){
 	islogin = true;
 }
 
-//localStorage.setItem('islogin',false);
 
 if(!islogin){//未登录时显示登录注册
 	$(".login-li").show();

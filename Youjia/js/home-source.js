@@ -2,7 +2,7 @@
 //获取数据，渲染到房源页面
 
 //初始状态，显示16个房源，加载更多后显示更多
-var shouNum = 16;
+var shouNum = 16; 
 
 $.getJSON('static/homeSource.json',function(data){
 	
